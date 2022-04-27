@@ -4,38 +4,7 @@ SenK is a high-performance linear solver library in C++. The most important feat
 
 ## ILUB precondtioner
 
-$$
-\mathbf{A} = \left[
-	\begin{array}{cc|cc|cc}
-	● &   &   &   & ● &    \\
-	  & ● &   &   &   & ●  \\\hline
-	  &   & ● &   &   &    \\
-	● &   &   & ● & ● &    \\\hline
-	  &   &   &   & ● &    \\
-	  &   &   &   &   & ●  \\
-	\end{array}
-\right] \quad→\quad
-\mathbf{L} = \left[
-	\begin{array}{cc|cc|cc|cc}
-	● &   &   &   &   &    \\
-	● & ● &   &   &   &    \\\hline
-	● & ● & ● &   &   &    \\
-	● & ● & ● & ● &   &    \\\hline
-	  &   &   &   & ● &    \\
-	  &   &   &   & ● & ●  \\
-	\end{array}
-\right],
-\mathbf{U} = \left[
-	\begin{array}{cc|cc|cc|cc}
-	● & ● &   &   & ● & ●  \\
-	  & ● &   &   & ● & ●  \\\hline
-	  &   & ● & ● & ● & ●  \\
-	  &   &   & ● & ● & ●  \\\hline
-	  &   &   &   & ● & ●  \\
-	  &   &   &   &   & ●  \\
-	\end{array}
-\right]
-$$
+The ILUB preconditioner is one of the ILU preconditioners for the Krylov subspace linear solver. In ILU preconditioning, how to control fill-ins is one of the most significant aspects. If any fill-ins are not permitted, the resultant preconditioner may only slightly improve the difficulty of the problem, but its computational complexity is relatively low.
 
 ## Sample
 
