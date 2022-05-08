@@ -3,10 +3,7 @@
 
 #include <vector>
 #include <iostream>
-
-#ifdef __GNUC__
-#include <omp.h>
-#endif
+//#include <omp.h>
 
 namespace senk {
 
@@ -90,7 +87,7 @@ void SptrsvCsr_u(T *val, int *cind, int *rptr, T *x, T *y, int N)
     }
 }
 
-template <typename T, int bnl, int bnw>
+template <typename T, int bnl, int bnw> inline
 void SptrsvBcsr_l(
     T *bval, int *bcind, int *brptr, 
     T *x, T *y, int N)
@@ -117,7 +114,7 @@ void SptrsvBcsr_l(
     }
 }
 
-template <typename T, int bnl, int bnw>
+template <typename T, int bnl, int bnw> inline
 void SptrsvBcsr_u(
     T *bval, int *bcind, int *brptr,
     T *x, T *y, int N)

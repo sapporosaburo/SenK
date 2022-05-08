@@ -2,10 +2,7 @@
 #define SENK_UTILS_HPP
 
 #include <cstdlib>
-
-#ifdef __GNUC__
-#include <omp.h>
-#endif
+//#include <omp.h>
 
 namespace senk {
 

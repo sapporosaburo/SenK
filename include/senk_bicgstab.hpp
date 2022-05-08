@@ -1,14 +1,33 @@
+/**
+ * @file senk_bicgstab.hpp
+ * @brief The BiCGStab method is defined.
+ * @author Kengo Suzuki
+ * @data 5/8/2021
+ */
 #ifndef SENK_BICGSTAB_HPP
 #define SENK_BICGSTAB_HPP
 
 #include "senk_sparse.hpp"
 #include "senk_blas1.hpp"
-#include "senk_blas2.hpp"
 
 namespace senk {
-
+/**
+ * @brief namespace solver.
+ */
 namespace solver {
-
+/**
+ * @brief Non-preconditioned BiCGStab solver
+ * @tparam T The type of a coefficient matrix and vectors.
+ * @param val val array of the CSR storage format.
+ * @param cind col-index array of the CSR storage format.
+ * @param rptr row-ptr array of the CSR storage format.
+ * @param b right-hand side vector.
+ * @param x unknown vector.
+ * @param nrm_b The 2-norm of b.
+ * @param max_iter Maximum number of iterations.
+ * @param N The size of the matrix and the vectors.
+ * @param epsilon The convergence criterion.
+ */
 template <typename T>
 void Bicgstab(
     T *val, int *cind, int *rptr,
@@ -43,7 +62,7 @@ void Bicgstab(
         blas1::Axpy<T>(omega, s, x, N);
         blas1::Axpyz<T>(-omega, As, s, r, N);
         nrm_r = blas1::Nrm2<T>(r, N);
-        printf("%e\n", nrm_r/nrm_b);
+        printf("%d %e\n", i+1, nrm_r/nrm_b);
         if(nrm_r < epsilon * nrm_b) {
             printf("# iter %d\n", i+1);
             printf("# res %e\n", nrm_r/nrm_b);
@@ -68,7 +87,25 @@ void Bicgstab(
     delete[] As;
     delete[] temp;
 }
-
+/**
+ * @brief ILU preconditioned BiCGStab solver
+ * @tparam T The type of a coefficient matrix and vectors.
+ * @param val val array of the CSR storage format.
+ * @param cind col-index array of the CSR storage format.
+ * @param rptr row-ptr array of the CSR storage format.
+ * @param lval Same as val, but for the matrix L.
+ * @param lcind Same as cind, but for the matrix L.
+ * @param lrptr Same as rptr, but for the matrix L.
+ * @param uval Same as val, but for the matrix U.
+ * @param ucind Same as cind, but for the matrix U.
+ * @param urptr Same as rptr, but for the matrix U.
+ * @param b right-hand side vector.
+ * @param x unknown vector.
+ * @param nrm_b The 2-norm of b.
+ * @param max_iter Maximum number of iterations.
+ * @param N The size of the matrix and the vectors.
+ * @param epsilon The convergence criterion.
+ */
 template <typename T>
 void IluBicgstab(
     T *val, int *cind, int *rptr,
@@ -112,7 +149,7 @@ void IluBicgstab(
         blas1::Axpy<T>(omega, Ks, x, N);
         blas1::Axpyz<T>(-omega, AKs, s, r, N);
         nrm_r = blas1::Nrm2<T>(r, N);
-        printf("%e\n", nrm_r/nrm_b);
+        printf("%d %e\n", i+1, nrm_r/nrm_b);
         if(nrm_r < epsilon * nrm_b) {
             printf("# iter %d\n", i+1);
             printf("# res %e\n", nrm_r/nrm_b);
@@ -139,7 +176,27 @@ void IluBicgstab(
     delete[] AKs;
     delete[] temp;
 }
-
+/**
+ * @brief ILUB preconditioned BiCGStab solver
+ * @tparam T The type of a coefficient matrix and vectors.
+ * @tparam bnl The number of rows of the block.
+ * @tparam bnw The number of columns of the block.
+ * @param val val array of the CSR storage format.
+ * @param cind col-index array of the CSR storage format.
+ * @param rptr row-ptr array of the CSR storage format.
+ * @param lval Same as val, but for the matrix L.
+ * @param lcind Same as cind, but for the matrix L.
+ * @param lrptr Same as rptr, but for the matrix L.
+ * @param uval Same as val, but for the matrix U.
+ * @param ucind Same as cind, but for the matrix U.
+ * @param urptr Same as rptr, but for the matrix U.
+ * @param b right-hand side vector.
+ * @param x unknown vector.
+ * @param nrm_b The 2-norm of b.
+ * @param max_iter Maximum number of iterations.
+ * @param N The size of the matrix and the vectors.
+ * @param epsilon The convergence criterion.
+ */
 template <typename T, int bnl, int bnw>
 void IlubBicgstab(
     T *val, int *cind, int *rptr,
@@ -183,7 +240,7 @@ void IlubBicgstab(
         blas1::Axpy<T>(omega, Ks, x, N);
         blas1::Axpyz<T>(-omega, AKs, s, r, N);
         nrm_r = blas1::Nrm2<T>(r, N);
-        printf("%e\n", nrm_r/nrm_b);
+        printf("%d %e\n", i+1, nrm_r/nrm_b);
         if(nrm_r < epsilon * nrm_b) {
             printf("# iter %d\n", i+1);
             printf("# res %e\n", nrm_r/nrm_b);
