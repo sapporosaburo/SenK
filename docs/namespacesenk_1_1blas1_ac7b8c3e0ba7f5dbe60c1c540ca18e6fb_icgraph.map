@@ -1,0 +1,5 @@
+<map id="senk::blas1::Axpyz" name="senk::blas1::Axpyz">
+<area shape="rect" id="node1" title="Compute z = a * x + b * y." alt="" coords="227,31,361,57"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1solver.html#a7140b753b7ebbbd6adceb4dc1e3ad1b4" title="ILUB preconditioned BiCGStab solver." alt="" coords="5,5,179,32"/>
+<area shape="rect" id="node3" href="$namespacesenk_1_1solver.html#a8d1fa964ca7888828d2719ba846d570a" title="ILU preconditioned BiCGStab solver." alt="" coords="9,56,175,83"/>
+</map>

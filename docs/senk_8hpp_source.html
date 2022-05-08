@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SenK: SenK documentation</title>
+<title>SenK: include/senk.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('senk_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -83,51 +82,35 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">SenK documentation </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">senk.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >SenK is a C++ library for high-performance linear solvers that primarily provides solvers for sparse linear systems with CSR matrix storage format. You can easily apply SenK to your applicatioins because it is a header-only library that provides basic functions. </p>
-<h1><a class="anchor" id="s1"></a>
-Requirement</h1>
-<p >I try to implement it in a way that it does not depend on the compiler and OS, but it has been tested on only macOS, Ubuntu, and CentOS. Since I am developing with C++17, please use a compiler that supports C++17. Installation of other libraries is not required because only C++ standard libraries are used. </p>
-<h1><a class="anchor" id="s2"></a>
-Usage</h1>
-<p >Since SenK is a header-only library, no pre-build is required. Just include <a class="el" href="senk_8hpp.html" title="Top-level header.">senk.hpp</a> in your source file and specify the include path at compile time. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="senk_8hpp.html">senk.hpp</a>&quot;</span></div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
-<div class="line">    <span class="comment">//Blhablhablha</span></div>
-<div class="line">}</div>
-<div class="ttc" id="asenk_8hpp_html"><div class="ttname"><a href="senk_8hpp.html">senk.hpp</a></div><div class="ttdoc">Top-level header.</div></div>
-</div><!-- fragment --> <div class="fragment"><div class="line">g++ -O3 -std=c++17 -fopenmp main.cpp -I(PATH to SenK)/include -o a.out</div>
-</div><!-- fragment --> <h1><a class="anchor" id="s3"></a>
-Implementation status</h1>
-<ul>
-<li>Solver<ul>
-<li>Completed: GMRES(m), GCR(m), BiCGStab method</li>
-<li>Ongoing: CG method</li>
-</ul>
-</li>
-<li>Preconditioner<ul>
-<li>Completed: ILU(0), ILU(p), ILUB preconditioner</li>
-<li>Ongoing: IC(0), IC(p) preconditioner </li>
-</ul>
-</li>
-</ul>
-<h1><a class="anchor" id="s4"></a>
-ILUB preconditioner</h1>
-<p >ILUB preconditioning is one of the preconditioning techniques based on ILU factorization. The control of fill-in during ILU factorization plays an important role. Since there is a trade-off between increased computational cost due to fill-ins and improved convergence property, it is necessary to control fill-in appropriately. In ILUB preconditioning, fill-in is controlled based on a certain (vertical) block structure. It thereby efficiently utilizes SIMD operations for calculations inside the block during forward/backward substitution in the preconditioning process. The SIMD operations can mitigate the effects of increased computational complexity, and the benefits of improved convergence property are more readily apparent. </p><dl class="section author"><dt>Author</dt><dd>Kengo Suzuki </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>5/8/2021 </dd></dl>
-</div></div><!-- PageDoc -->
-</div><!-- contents -->
+<a href="senk_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef SENK_HPP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define SENK_HPP</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;senk_io.hpp&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;senk_matrix.hpp&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;senk_utils.hpp&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;senk_graph.hpp&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//#include &quot;senk_blas1.hpp&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//#include &quot;senk_blas2.hpp&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//#include &quot;senk_sparse.hpp&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="senk__bicgstab_8hpp.html">senk_bicgstab.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;senk_gmres.hpp&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;senk_gcr.hpp&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="asenk__bicgstab_8hpp_html"><div class="ttname"><a href="senk__bicgstab_8hpp.html">senk_bicgstab.hpp</a></div><div class="ttdoc">The BiCGStab method is defined.</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="senk_8hpp.html">senk.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>
 </html>
-=======
-h1 Test
->>>>>>> 131353a6032de71e509966be898a4a6574a18b46
