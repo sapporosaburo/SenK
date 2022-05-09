@@ -27,7 +27,7 @@
   <td id="projectalign">
    <div id="projectname">SenK
    </div>
-   <div id="projectbrief">SenK is a high-performance linear solver library in C++.</div>
+   <div id="projectbrief">SenK is a C++ library for high-performance linear solvers.</div>
   </td>
  </tr>
  </tbody>
@@ -83,54 +83,64 @@ $(document).ready(function(){initNavTree('senk_8hpp.html',''); initResizable(); 
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle"><div class="title">senk.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Top-level header.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;senk_io.hpp&quot;</code><br />
-<code>#include &quot;senk_matrix.hpp&quot;</code><br />
-<code>#include &quot;senk_utils.hpp&quot;</code><br />
-<code>#include &quot;senk_graph.hpp&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="senk__io_8hpp_source.html">senk_io.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="senk__matrix_8hpp_source.html">senk_matrix.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="senk__utils_8hpp_source.html">senk_utils.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="senk__graph_8hpp_source.html">senk_graph.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="senk__bicgstab_8hpp_source.html">senk_bicgstab.hpp</a>&quot;</code><br />
-<code>#include &quot;senk_gmres.hpp&quot;</code><br />
-<code>#include &quot;senk_gcr.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="senk__gmres_8hpp_source.html">senk_gmres.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="senk__gcr_8hpp_source.html">senk_gcr.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for senk.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="senk_8hpp__incl.png" border="0" usemap="#ainclude_2senk_8hpp" alt=""/></div>
 <map name="ainclude_2senk_8hpp" id="ainclude_2senk_8hpp">
-<area shape="rect" title="Top&#45;level header." alt="" coords="412,5,532,32"/>
-<area shape="rect" href="senk__io_8hpp_source.html" title=" " alt="" coords="73,155,165,181"/>
-<area shape="rect" href="senk__utils_8hpp_source.html" title=" " alt="" coords="200,229,307,256"/>
-<area shape="rect" href="senk__matrix_8hpp_source.html" title=" " alt="" coords="315,80,434,107"/>
-<area shape="rect" href="senk__graph_8hpp_source.html" title=" " alt="" coords="171,80,285,107"/>
-<area shape="rect" href="senk__bicgstab_8hpp.html" title="The BiCGStab method is defined." alt="" coords="569,80,700,107"/>
-<area shape="rect" href="senk__gmres_8hpp_source.html" title=" " alt="" coords="725,80,843,107"/>
-<area shape="rect" href="senk__gcr_8hpp_source.html" title=" " alt="" coords="868,80,967,107"/>
-<area shape="rect" title=" " alt="" coords="571,229,643,256"/>
+<area shape="rect" title="Top&#45;level header." alt="" coords="431,5,551,32"/>
+<area shape="rect" href="senk__io_8hpp.html" title="Functions related to inputs and outputs are defined." alt="" coords="153,155,245,181"/>
+<area shape="rect" href="senk__utils_8hpp.html" title="Utility functions are defined." alt="" coords="285,229,392,256"/>
+<area shape="rect" href="senk__matrix_8hpp.html" title="Functions related (sparse) matrices are defined." alt="" coords="431,80,550,107"/>
+<area shape="rect" href="senk__graph_8hpp.html" title="Functions related to the graph theory are written." alt="" coords="231,80,345,107"/>
+<area shape="rect" href="senk__bicgstab_8hpp.html" title="The BiCGStab method is defined." alt="" coords="588,80,719,107"/>
+<area shape="rect" href="senk__gmres_8hpp.html" title="The GMRES solvers are defined." alt="" coords="870,80,989,107"/>
+<area shape="rect" href="senk__gcr_8hpp.html" title="The GCR solvers are defined." alt="" coords="743,80,841,107"/>
+<area shape="rect" title=" " alt="" coords="189,229,261,256"/>
 <area shape="rect" title=" " alt="" coords="5,229,72,256"/>
 <area shape="rect" title=" " alt="" coords="96,229,165,256"/>
-<area shape="rect" href="senk__helper_8hpp_source.html" title=" " alt="" coords="339,229,455,256"/>
-<area shape="rect" title=" " alt="" coords="223,304,283,331"/>
+<area shape="rect" href="senk__helper_8hpp.html" title="Some supplemental functions are defined." alt="" coords="417,229,533,256"/>
+<area shape="rect" title=" " alt="" coords="309,304,369,331"/>
 <area shape="rect" title=" " alt="" coords="377,155,434,181"/>
-<area shape="rect" title=" " alt="" coords="291,155,352,181"/>
-<area shape="rect" href="senk__class_8hpp_source.html" title=" " alt="" coords="510,155,623,181"/>
-<area shape="rect" title=" " alt="" coords="496,229,547,256"/>
-<area shape="rect" href="senk__sparse_8hpp_source.html" title=" " alt="" coords="785,155,906,181"/>
-<area shape="rect" href="senk__blas1_8hpp.html" title="Level1 BLAS&#45;style functions are written." alt="" coords="647,155,761,181"/>
-<area shape="rect" title=" " alt="" coords="816,229,875,256"/>
-<area shape="rect" title=" " alt="" coords="675,229,733,256"/>
-<area shape="rect" href="senk__blas2_8hpp.html" title="Level2 BLAS&#45;style functions are written." alt="" coords="930,155,1043,181"/>
+<area shape="rect" title=" " alt="" coords="648,155,709,181"/>
+<area shape="rect" href="senk__class_8hpp.html" title="Classes used in SenK are written." alt="" coords="510,155,623,181"/>
+<area shape="rect" title=" " alt="" coords="557,229,608,256"/>
+<area shape="rect" href="senk__sparse_8hpp.html" title="Functions related to sparse matrices are written." alt="" coords="871,155,993,181"/>
+<area shape="rect" href="senk__blas1_8hpp.html" title="Level1 BLAS&#45;style functions are written." alt="" coords="734,155,847,181"/>
+<area shape="rect" title=" " alt="" coords="761,229,820,256"/>
+<area shape="rect" href="senk__blas2_8hpp.html" title="Level2 BLAS&#45;style functions are written." alt="" coords="1017,155,1130,181"/>
 </map>
 </div>
 </div>
 <p><a href="senk_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacesenk"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesenk.html">senk</a></td></tr>
+<tr class="memdesc:namespacesenk"><td class="mdescLeft">&#160;</td><td class="mdescRight">The top-level namespace of SenK. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Top-level header. </p>
 <dl class="section author"><dt>Author</dt><dd>Kengo Suzuki </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>5/8/2021 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="senk_8hpp_source.html">senk.hpp</a>.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

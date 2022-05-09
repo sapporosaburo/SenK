@@ -1,5 +1,5 @@
 <map id="senk::solver::IlubBicgstab" name="senk::solver::IlubBicgstab">
 <area shape="rect" id="node1" title="ILUB preconditioned BiCGStab solver." alt="" coords="5,31,179,57"/>
-<area shape="rect" id="node2" href="$namespacesenk_1_1blas1.html#ac7b8c3e0ba7f5dbe60c1c540ca18e6fb" title="Compute z = a * x + b * y." alt="" coords="227,5,361,32"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1blas1.html#ac7b8c3e0ba7f5dbe60c1c540ca18e6fb" title="Compute z = a * x + y." alt="" coords="227,5,361,32"/>
 <area shape="rect" id="node3" href="$namespacesenk_1_1blas1.html#a3152c2a311c664bb975b7e150b183c4b" title="Compute the dot product of x and y." alt="" coords="235,56,353,83"/>
 </map>

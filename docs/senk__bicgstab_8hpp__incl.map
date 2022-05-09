@@ -1,9 +1,7 @@
 <map id="include/senk_bicgstab.hpp" name="include/senk_bicgstab.hpp">
-<area shape="rect" id="node1" title="The BiCGStab method is defined." alt="" coords="93,5,269,32"/>
-<area shape="rect" id="node2" href="$senk__sparse_8hpp_source.html" title=" " alt="" coords="50,80,171,107"/>
-<area shape="rect" id="node5" href="$senk__blas1_8hpp.html" title="Level1 BLAS&#45;style functions are written." alt="" coords="195,80,309,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,155,64,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="88,155,160,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="209,155,268,181"/>
-<area shape="rect" id="node7" href="$senk__helper_8hpp_source.html" title=" " alt="" coords="293,155,409,181"/>
+<area shape="rect" id="node1" title="The BiCGStab method is defined." alt="" coords="49,5,225,32"/>
+<area shape="rect" id="node2" href="$senk__sparse_8hpp.html" title="Functions related to sparse matrices are written." alt="" coords="5,80,127,107"/>
+<area shape="rect" id="node3" href="$senk__blas1_8hpp.html" title="Level1 BLAS&#45;style functions are written." alt="" coords="151,80,264,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="122,155,181,181"/>
+<area shape="rect" id="node5" href="$senk__helper_8hpp.html" title="Some supplemental functions are defined." alt="" coords="205,155,321,181"/>
 </map>

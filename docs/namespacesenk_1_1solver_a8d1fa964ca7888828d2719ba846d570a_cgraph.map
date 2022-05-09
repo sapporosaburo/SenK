@@ -1,4 +1,4 @@
 <map id="senk::solver::IluBicgstab" name="senk::solver::IluBicgstab">
 <area shape="rect" id="node1" title="ILU preconditioned BiCGStab solver." alt="" coords="5,5,172,32"/>
-<area shape="rect" id="node2" href="$namespacesenk_1_1blas1.html#ac7b8c3e0ba7f5dbe60c1c540ca18e6fb" title="Compute z = a * x + b * y." alt="" coords="220,5,355,32"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1blas1.html#ac7b8c3e0ba7f5dbe60c1c540ca18e6fb" title="Compute z = a * x + y." alt="" coords="220,5,355,32"/>
 </map>

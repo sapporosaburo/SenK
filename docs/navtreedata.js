@@ -28,30 +28,26 @@ var NAVTREE =
     [ "SenK documentation", "index.html", [
       [ "Requirement", "index.html#s1", null ],
       [ "Usage", "index.html#s2", null ],
-      [ "Implementation status", "index.html#s3", null ],
-      [ "ILUB preconditioner", "index.html#s4", null ]
-    ] ],
-    [ "SenK", "md__r_e_a_d_m_e.html", [
-      [ "ILUB precondtioner", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Sample", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
-    ] ],
-    [ "SenK", "md__r_e_a_d_m_e_ja.html", [
-      [ "必要条件", "md__r_e_a_d_m_e_ja.html#autotoc_md4", null ],
-      [ "使い方", "md__r_e_a_d_m_e_ja.html#autotoc_md5", null ],
-      [ "内容", "md__r_e_a_d_m_e_ja.html#autotoc_md6", null ],
-      [ "実装状況", "md__r_e_a_d_m_e_ja.html#autotoc_md7", null ],
-      [ "ILUB（分解）前処理", "md__r_e_a_d_m_e_ja.html#autotoc_md8", null ]
+      [ "Performance evaluations", "index.html#s3", null ],
+      [ "Implementation status", "index.html#s4", null ],
+      [ "ILUB preconditioner", "index.html#s5", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ]
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ]

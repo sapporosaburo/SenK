@@ -27,7 +27,7 @@
   <td id="projectalign">
    <div id="projectname">SenK
    </div>
-   <div id="projectbrief">SenK is a high-performance linear solver library in C++.</div>
+   <div id="projectbrief">SenK is a C++ library for high-performance linear solvers.</div>
   </td>
  </tr>
  </tbody>
@@ -85,38 +85,596 @@ $(document).ready(function(){initNavTree('classsenk_1_1sparse_1_1_sp_vec.html','
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsenk_1_1sparse_1_1_sp_vec-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">senk::sparse::SpVec&lt; T1, T2 &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Sparse vector class.  
+ <a href="classsenk_1_1sparse_1_1_sp_vec.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9c1f4bd4523b6e11da94b1ad559374a"><td class="memItemLeft" align="right" valign="top"><a id="ae9c1f4bd4523b6e11da94b1ad559374a" name="ae9c1f4bd4523b6e11da94b1ad559374a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Append</b> (T1 t_val, T2 t_lev, int t_idx)</td></tr>
+<tr class="memitem:a23c78bb942ebbcc5fc57059e22cf2de8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#a23c78bb942ebbcc5fc57059e22cf2de8">SpVec</a> ()</td></tr>
+<tr class="memdesc:a23c78bb942ebbcc5fc57059e22cf2de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#a23c78bb942ebbcc5fc57059e22cf2de8">More...</a><br /></td></tr>
+<tr class="separator:a23c78bb942ebbcc5fc57059e22cf2de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e85deef39daf1ddaf346aaef015da8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#a6e85deef39daf1ddaf346aaef015da8b">~SpVec</a> ()</td></tr>
+<tr class="memdesc:a6e85deef39daf1ddaf346aaef015da8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#a6e85deef39daf1ddaf346aaef015da8b">More...</a><br /></td></tr>
+<tr class="separator:a6e85deef39daf1ddaf346aaef015da8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c1f4bd4523b6e11da94b1ad559374a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#ae9c1f4bd4523b6e11da94b1ad559374a">Append</a> (T1 t_val, T2 t_lev, int t_idx)</td></tr>
+<tr class="memdesc:ae9c1f4bd4523b6e11da94b1ad559374a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append argument values to the arrays.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#ae9c1f4bd4523b6e11da94b1ad559374a">More...</a><br /></td></tr>
 <tr class="separator:ae9c1f4bd4523b6e11da94b1ad559374a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6bf2dbe01cf82f599ea3ec54d20da7a"><td class="memItemLeft" align="right" valign="top"><a id="ac6bf2dbe01cf82f599ea3ec54d20da7a" name="ac6bf2dbe01cf82f599ea3ec54d20da7a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Append</b> (T1 *t_val, T2 *t_lev, int *t_idx, int t_len)</td></tr>
+<tr class="memitem:ac6bf2dbe01cf82f599ea3ec54d20da7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#ac6bf2dbe01cf82f599ea3ec54d20da7a">Append</a> (T1 *t_val, T2 *t_lev, int *t_idx, int t_len)</td></tr>
+<tr class="memdesc:ac6bf2dbe01cf82f599ea3ec54d20da7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append argument values to the arrays.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#ac6bf2dbe01cf82f599ea3ec54d20da7a">More...</a><br /></td></tr>
 <tr class="separator:ac6bf2dbe01cf82f599ea3ec54d20da7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a418f705f9043be6c4bd84eaba5ce828b"><td class="memItemLeft" align="right" valign="top"><a id="a418f705f9043be6c4bd84eaba5ce828b" name="a418f705f9043be6c4bd84eaba5ce828b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetLen</b> ()</td></tr>
+<tr class="memitem:a418f705f9043be6c4bd84eaba5ce828b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#a418f705f9043be6c4bd84eaba5ce828b">GetLen</a> ()</td></tr>
+<tr class="memdesc:a418f705f9043be6c4bd84eaba5ce828b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return len.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#a418f705f9043be6c4bd84eaba5ce828b">More...</a><br /></td></tr>
 <tr class="separator:a418f705f9043be6c4bd84eaba5ce828b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1c9855c996a8beac502786a16f00c74"><td class="memItemLeft" align="right" valign="top"><a id="ad1c9855c996a8beac502786a16f00c74" name="ad1c9855c996a8beac502786a16f00c74"></a>
-T1&#160;</td><td class="memItemRight" valign="bottom"><b>GetVal</b> (int i)</td></tr>
+<tr class="memitem:ad1c9855c996a8beac502786a16f00c74"><td class="memItemLeft" align="right" valign="top">T1&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#ad1c9855c996a8beac502786a16f00c74">GetVal</a> (int i)</td></tr>
+<tr class="memdesc:ad1c9855c996a8beac502786a16f00c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return i-th value of val.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#ad1c9855c996a8beac502786a16f00c74">More...</a><br /></td></tr>
 <tr class="separator:ad1c9855c996a8beac502786a16f00c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accbdfa281548ad6042fb002798b6ab80"><td class="memItemLeft" align="right" valign="top"><a id="accbdfa281548ad6042fb002798b6ab80" name="accbdfa281548ad6042fb002798b6ab80"></a>
-T2&#160;</td><td class="memItemRight" valign="bottom"><b>GetLev</b> (int i)</td></tr>
+<tr class="memitem:accbdfa281548ad6042fb002798b6ab80"><td class="memItemLeft" align="right" valign="top">T2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#accbdfa281548ad6042fb002798b6ab80">GetLev</a> (int i)</td></tr>
+<tr class="memdesc:accbdfa281548ad6042fb002798b6ab80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return i-th value of lev.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#accbdfa281548ad6042fb002798b6ab80">More...</a><br /></td></tr>
 <tr class="separator:accbdfa281548ad6042fb002798b6ab80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e2d450ad61d83c5600b3fb9712d0874"><td class="memItemLeft" align="right" valign="top"><a id="a9e2d450ad61d83c5600b3fb9712d0874" name="a9e2d450ad61d83c5600b3fb9712d0874"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetIdx</b> (int i)</td></tr>
+<tr class="memitem:a9e2d450ad61d83c5600b3fb9712d0874"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#a9e2d450ad61d83c5600b3fb9712d0874">GetIdx</a> (int i)</td></tr>
+<tr class="memdesc:a9e2d450ad61d83c5600b3fb9712d0874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return i-th value of idx.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#a9e2d450ad61d83c5600b3fb9712d0874">More...</a><br /></td></tr>
 <tr class="separator:a9e2d450ad61d83c5600b3fb9712d0874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28b9e139b3c33eccdbf9efa4b60a0397"><td class="memItemLeft" align="right" valign="top"><a id="a28b9e139b3c33eccdbf9efa4b60a0397" name="a28b9e139b3c33eccdbf9efa4b60a0397"></a>
-std::tuple&lt; T1, T2, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Get</b> (int i)</td></tr>
+<tr class="memitem:a28b9e139b3c33eccdbf9efa4b60a0397"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; T1, T2, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#a28b9e139b3c33eccdbf9efa4b60a0397">Get</a> (int i)</td></tr>
+<tr class="memdesc:a28b9e139b3c33eccdbf9efa4b60a0397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the tuple of i-th values of val, lev, and idx.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#a28b9e139b3c33eccdbf9efa4b60a0397">More...</a><br /></td></tr>
 <tr class="separator:a28b9e139b3c33eccdbf9efa4b60a0397"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e75f5f512664109f7524f27f8e2498e"><td class="memItemLeft" align="right" valign="top"><a id="a0e75f5f512664109f7524f27f8e2498e" name="a0e75f5f512664109f7524f27f8e2498e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b> ()</td></tr>
+<tr class="memitem:a0e75f5f512664109f7524f27f8e2498e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#a0e75f5f512664109f7524f27f8e2498e">Clear</a> ()</td></tr>
+<tr class="memdesc:a0e75f5f512664109f7524f27f8e2498e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of len to 0.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#a0e75f5f512664109f7524f27f8e2498e">More...</a><br /></td></tr>
 <tr class="separator:a0e75f5f512664109f7524f27f8e2498e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a67a55e65432ffd035fa72689055f4ff3"><td class="memItemLeft" align="right" valign="top">T1 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#a67a55e65432ffd035fa72689055f4ff3">val</a></td></tr>
+<tr class="memdesc:a67a55e65432ffd035fa72689055f4ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array that stores the values of the nonzero elements.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#a67a55e65432ffd035fa72689055f4ff3">More...</a><br /></td></tr>
+<tr class="separator:a67a55e65432ffd035fa72689055f4ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1f139a13d542ca1508005f67720472"><td class="memItemLeft" align="right" valign="top">T2 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#ade1f139a13d542ca1508005f67720472">lev</a></td></tr>
+<tr class="memdesc:ade1f139a13d542ca1508005f67720472"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array that stores the supplemental values of the nonzero elements.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#ade1f139a13d542ca1508005f67720472">More...</a><br /></td></tr>
+<tr class="separator:ade1f139a13d542ca1508005f67720472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a146417df757fcda191587f07767e3b3f"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#a146417df757fcda191587f07767e3b3f">idx</a></td></tr>
+<tr class="memdesc:a146417df757fcda191587f07767e3b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array that stores the indices of the nonzero elements.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#a146417df757fcda191587f07767e3b3f">More...</a><br /></td></tr>
+<tr class="separator:a146417df757fcda191587f07767e3b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aef74974581b28b9d02030b39f17ca7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#a4aef74974581b28b9d02030b39f17ca7">len</a></td></tr>
+<tr class="memdesc:a4aef74974581b28b9d02030b39f17ca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of the nonzero elements.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#a4aef74974581b28b9d02030b39f17ca7">More...</a><br /></td></tr>
+<tr class="separator:a4aef74974581b28b9d02030b39f17ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2c3a475981f12b1af1f24dfbd1a285"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html#aba2c3a475981f12b1af1f24dfbd1a285">mlen</a></td></tr>
+<tr class="memdesc:aba2c3a475981f12b1af1f24dfbd1a285"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of allocated memories.  <a href="classsenk_1_1sparse_1_1_sp_vec.html#aba2c3a475981f12b1af1f24dfbd1a285">More...</a><br /></td></tr>
+<tr class="separator:aba2c3a475981f12b1af1f24dfbd1a285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T1, typename T2&gt;<br />
+class senk::sparse::SpVec&lt; T1, T2 &gt;</div><p >Sparse vector class. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T1</td><td>Type of the val array. </td></tr>
+    <tr><td class="paramname">T2</td><td>Type of the lev array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00024">24</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a23c78bb942ebbcc5fc57059e22cf2de8" name="a23c78bb942ebbcc5fc57059e22cf2de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23c78bb942ebbcc5fc57059e22cf2de8">&#9670;&nbsp;</a></span>SpVec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::SpVec </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p >Allocate memory of size SP_LEN. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00041">41</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6e85deef39daf1ddaf346aaef015da8b" name="a6e85deef39daf1ddaf346aaef015da8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e85deef39daf1ddaf346aaef015da8b">&#9670;&nbsp;</a></span>~SpVec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::~<a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">SpVec</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+<p >Free all memories for the arrays. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00052">52</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac6bf2dbe01cf82f599ea3ec54d20da7a" name="ac6bf2dbe01cf82f599ea3ec54d20da7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6bf2dbe01cf82f599ea3ec54d20da7a">&#9670;&nbsp;</a></span>Append() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::Append </td>
+          <td>(</td>
+          <td class="paramtype">T1 *&#160;</td>
+          <td class="paramname"><em>t_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T2 *&#160;</td>
+          <td class="paramname"><em>t_lev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>t_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Append argument values to the arrays. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t_val</td><td>Values to be appended to val. </td></tr>
+    <tr><td class="paramname">t_lev</td><td>Values to be appended to lev. </td></tr>
+    <tr><td class="paramname">t_idx</td><td>Values to be appended to idx. </td></tr>
+    <tr><td class="paramname">t_len</td><td>Length of these argument values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00082">82</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae9c1f4bd4523b6e11da94b1ad559374a" name="ae9c1f4bd4523b6e11da94b1ad559374a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c1f4bd4523b6e11da94b1ad559374a">&#9670;&nbsp;</a></span>Append() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::Append </td>
+          <td>(</td>
+          <td class="paramtype">T1&#160;</td>
+          <td class="paramname"><em>t_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T2&#160;</td>
+          <td class="paramname"><em>t_lev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Append argument values to the arrays. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t_val</td><td>A value to be appended to val. </td></tr>
+    <tr><td class="paramname">t_lev</td><td>A value to be appended to lev. </td></tr>
+    <tr><td class="paramname">t_idx</td><td>A value to be appended to idx. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00063">63</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0e75f5f512664109f7524f27f8e2498e" name="a0e75f5f512664109f7524f27f8e2498e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e75f5f512664109f7524f27f8e2498e">&#9670;&nbsp;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the value of len to 0. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00122">122</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a28b9e139b3c33eccdbf9efa4b60a0397" name="a28b9e139b3c33eccdbf9efa4b60a0397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b9e139b3c33eccdbf9efa4b60a0397">&#9670;&nbsp;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt; T1, T2, int &gt; <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::Get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the tuple of i-th values of val, lev, and idx. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00115">115</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9e2d450ad61d83c5600b3fb9712d0874" name="a9e2d450ad61d83c5600b3fb9712d0874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2d450ad61d83c5600b3fb9712d0874">&#9670;&nbsp;</a></span>GetIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::GetIdx </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return i-th value of idx. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00111">111</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a418f705f9043be6c4bd84eaba5ce828b" name="a418f705f9043be6c4bd84eaba5ce828b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a418f705f9043be6c4bd84eaba5ce828b">&#9670;&nbsp;</a></span>GetLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::GetLen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return len. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00099">99</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="accbdfa281548ad6042fb002798b6ab80" name="accbdfa281548ad6042fb002798b6ab80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accbdfa281548ad6042fb002798b6ab80">&#9670;&nbsp;</a></span>GetLev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T2 <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::GetLev </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return i-th value of lev. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00107">107</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad1c9855c996a8beac502786a16f00c74" name="ad1c9855c996a8beac502786a16f00c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1c9855c996a8beac502786a16f00c74">&#9670;&nbsp;</a></span>GetVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T1 <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::GetVal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return i-th value of val. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00103">103</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a146417df757fcda191587f07767e3b3f" name="a146417df757fcda191587f07767e3b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a146417df757fcda191587f07767e3b3f">&#9670;&nbsp;</a></span>idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::idx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An array that stores the indices of the nonzero elements. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00031">31</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4aef74974581b28b9d02030b39f17ca7" name="a4aef74974581b28b9d02030b39f17ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aef74974581b28b9d02030b39f17ca7">&#9670;&nbsp;</a></span>len</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::len</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of the nonzero elements. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00033">33</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ade1f139a13d542ca1508005f67720472" name="ade1f139a13d542ca1508005f67720472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1f139a13d542ca1508005f67720472">&#9670;&nbsp;</a></span>lev</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T2* <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::lev</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An array that stores the supplemental values of the nonzero elements. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00029">29</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aba2c3a475981f12b1af1f24dfbd1a285" name="aba2c3a475981f12b1af1f24dfbd1a285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2c3a475981f12b1af1f24dfbd1a285">&#9670;&nbsp;</a></span>mlen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::mlen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The size of allocated memories. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00035">35</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a67a55e65432ffd035fa72689055f4ff3" name="a67a55e65432ffd035fa72689055f4ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67a55e65432ffd035fa72689055f4ff3">&#9670;&nbsp;</a></span>val</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T1* <a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">senk::sparse::SpVec</a>&lt; T1, T2 &gt;::val</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An array that stores the values of the nonzero elements. </p>
+
+<p class="definition">Definition at line <a class="el" href="senk__class_8hpp_source.html#l00027">27</a> of file <a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="senk__class_8hpp_source.html">senk_class.hpp</a></li>
 </ul>
@@ -125,7 +683,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b> ()</td></tr
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacesenk.html">senk</a></li><li class="navelem"><b>sparse</b></li><li class="navelem"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">SpVec</a></li>
+    <li class="navelem"><a class="el" href="namespacesenk.html">senk</a></li><li class="navelem"><a class="el" href="namespacesenk_1_1sparse.html">sparse</a></li><li class="navelem"><a class="el" href="classsenk_1_1sparse_1_1_sp_vec.html">SpVec</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
