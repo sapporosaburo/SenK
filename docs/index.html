@@ -100,9 +100,76 @@ The SenK library can be downloaded from <a href="https://github.com/sapporosabur
 <div class="ttc" id="asenk_8hpp_html"><div class="ttname"><a href="senk_8hpp.html">senk.hpp</a></div><div class="ttdoc">Top-level header.</div></div>
 </div><!-- fragment --> <div class="fragment"><div class="line">g++ -O3 -std=c++17 -fopenmp main.cpp -I(PATH to SenK)/include -o a.out</div>
 </div><!-- fragment --> <h1><a class="anchor" id="s3"></a>
+Sample</h1>
+<p >A sample program to execute the ILU(0) preconditioned GMRES(m) solver in double-precision is as follows: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="senk_8hpp.html">senk.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;senk_test.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
+<div class="line">{</div>
+<div class="line">    std::string filename = <span class="stringliteral">&quot;PATH to a MatrixMarket file&quot;</span>;</div>
+<div class="line">    <span class="comment">// Read the MatrixMarket file.</span></div>
+<div class="line">    <span class="keywordtype">double</span> *tval;</div>
+<div class="line">    <span class="keywordtype">int</span> *tcind, *trptr;</div>
+<div class="line">    <span class="keywordtype">int</span> N, M;</div>
+<div class="line">    <a class="code hl_enumeration" href="namespacesenk_1_1io.html#a9ca149b8df9c4f715c956669fa297539">senk::io::Shape</a> shape;</div>
+<div class="line">    <span class="keywordtype">bool</span> removeZeros = <span class="keyword">true</span>;</div>
+<div class="line">    <a class="code hl_function" href="namespacesenk_1_1io.html#af48a46954141d52a15acf425f4875e01">senk::io::ReadMatrixMarket</a>(</div>
+<div class="line">        filename, &amp;tval, &amp;tcind, &amp;trptr,</div>
+<div class="line">        &amp;N, &amp;M, &amp;shape, removeZeros);</div>
+<div class="line">    </div>
+<div class="line">    <span class="comment">// Expand the input matrix if it is symmetric.</span></div>
+<div class="line">    <span class="keywordtype">double</span> *val;</div>
+<div class="line">    <span class="keywordtype">int</span> *cind, *rptr;</div>
+<div class="line">    <span class="keywordflow">if</span>(shape == senk::io::Shape::Sym) {</div>
+<div class="line">        senk::matrix::Expand(tval, tcind, trptr, &amp;val, &amp;cind, &amp;rptr, N);</div>
+<div class="line">    }<span class="keywordflow">else</span> {</div>
+<div class="line">        senk::matrix::Duplicate(tval, tcind, trptr, &amp;val, &amp;cind, &amp;rptr, N);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span>(!senk::matrix::CheckStructure(val, cind, rptr, N)) exit(1);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">double</span> *b = senk::utils::SafeMalloc&lt;double&gt;(N);</div>
+<div class="line">    <span class="keywordtype">double</span> *x = senk::utils::SafeMalloc&lt;double&gt;(N);</div>
+<div class="line">    senk::utils::Set&lt;double&gt;(1, b, N);</div>
+<div class="line">    senk::utils::Set&lt;double&gt;(0, x, N);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Perform the ILU(0) factorization.</span></div>
+<div class="line">    senk::matrix::Duplicate(val, cind, rptr, &amp;tval, &amp;tcind, &amp;trptr, N);</div>
+<div class="line">    senk::matrix::Ilu0(tval, tcind, trptr, N);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Split the factorized matrix into L and U.</span></div>
+<div class="line">    <span class="keywordtype">double</span> *lval;</div>
+<div class="line">    <span class="keywordtype">int</span> *lcind, *lrptr;</div>
+<div class="line">    <span class="keywordtype">double</span> *uval;</div>
+<div class="line">    <span class="keywordtype">int</span> *ucind, *urptr;</div>
+<div class="line">    senk::matrix::Split(</div>
+<div class="line">        tval, tcind, trptr,</div>
+<div class="line">        &amp;lval, &amp;lcind, &amp;lrptr,</div>
+<div class="line">        &amp;uval, &amp;ucind, &amp;urptr,</div>
+<div class="line">        <span class="keyword">nullptr</span>, N, <span class="stringliteral">&quot;L-DU&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Execute the ILU(0)-GMRES(m) solver.</span></div>
+<div class="line">    <span class="keywordtype">int</span> max_iter = 6000;</div>
+<div class="line">    <span class="keywordtype">int</span> m = 50;</div>
+<div class="line">    <span class="keywordtype">double</span> epsilon = 1.0e-8;</div>
+<div class="line">    <span class="keywordtype">double</span> nrm_b = senk::blas1::Nrm2&lt;double&gt;(b, N);  </div>
+<div class="line">    senk::solver::IluGmresm&lt;double&gt;(</div>
+<div class="line">        val, cind, rptr,</div>
+<div class="line">        lval, lcind, lrptr, uval, ucind, urptr,</div>
+<div class="line">        b, x, nrm_b, max_iter/m, m, N, epsilon);</div>
+<div class="line">    </div>
+<div class="line">    senk::test::RelativeResidualError(</div>
+<div class="line">        val, cind, rptr, b, x, N);</div>
+<div class="line">    </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespacesenk_1_1io_html_a9ca149b8df9c4f715c956669fa297539"><div class="ttname"><a href="namespacesenk_1_1io.html#a9ca149b8df9c4f715c956669fa297539">senk::io::Shape</a></div><div class="ttdeci">Shape</div><div class="ttdoc">enum for the shape of matrices.</div><div class="ttdef"><b>Definition:</b> <a href="senk__io_8hpp_source.html#l00026">senk_io.hpp:26</a></div></div>
+<div class="ttc" id="anamespacesenk_1_1io_html_af48a46954141d52a15acf425f4875e01"><div class="ttname"><a href="namespacesenk_1_1io.html#af48a46954141d52a15acf425f4875e01">senk::io::ReadMatrixMarket</a></div><div class="ttdeci">bool ReadMatrixMarket(std::string filename, double **val, int **cind, int **rptr, int *N, int *M, Shape *shape, bool removeZeros)</div><div class="ttdoc">Get a matrix in the CSR format from a MatrixMarket file.</div><div class="ttdef"><b>Definition:</b> <a href="senk__io_8hpp_source.html#l00041">senk_io.hpp:41</a></div></div>
+</div><!-- fragment --> <h1><a class="anchor" id="s4"></a>
 Performance evaluations</h1>
 <p >Coming soon. </p>
-<h1><a class="anchor" id="s4"></a>
+<h1><a class="anchor" id="s5"></a>
 Implementation status</h1>
 <ul>
 <li>Solver<ul>
@@ -116,7 +183,7 @@ Implementation status</h1>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="s5"></a>
+<h1><a class="anchor" id="s6"></a>
 ILUB preconditioner</h1>
 <p >ILUB preconditioning is one of the preconditioning techniques based on ILU factorization. The control of fill-in during ILU factorization plays an important role. Since there is a trade-off between increased computational cost due to fill-ins and improved convergence property, it is necessary to control fill-in appropriately. In ILUB preconditioning, fill-in is controlled based on a certain (vertical) block structure. It thereby efficiently utilizes SIMD operations for calculations inside the block during forward/backward substitution in the preconditioning process. The SIMD operations can mitigate the effects of increased computational complexity, and the benefits of improved convergence property are more readily apparent. </p><dl class="section author"><dt>Author</dt><dd>Kengo Suzuki </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>5/9/2022 </dd></dl>

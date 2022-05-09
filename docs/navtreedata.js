@@ -28,9 +28,10 @@ var NAVTREE =
     [ "SenK documentation", "index.html", [
       [ "Requirement", "index.html#s1", null ],
       [ "Usage", "index.html#s2", null ],
-      [ "Performance evaluations", "index.html#s3", null ],
-      [ "Implementation status", "index.html#s4", null ],
-      [ "ILUB preconditioner", "index.html#s5", null ]
+      [ "Sample", "index.html#s3", null ],
+      [ "Performance evaluations", "index.html#s4", null ],
+      [ "Implementation status", "index.html#s5", null ],
+      [ "ILUB preconditioner", "index.html#s6", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
