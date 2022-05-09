@@ -1,3 +1,9 @@
+/**
+ * @file senk_io.hpp
+ * @brief Functions related to inputs and outputs are defined.
+ * @author Kengo Suzuki
+ * @date 5/9/2022
+ */
 #ifndef SENK_IO_HPP
 #define SENK_IO_HPP
 
@@ -10,13 +16,28 @@
 
 namespace senk {
 
+/**
+ * @brief Contains functions related to inputs and outputs.
+ */
 namespace io {
-
+/**
+ * @brief enum for the shape of matrices.
+ */
 enum Shape {
     Sym,
     Unsym
 };
-
+/**
+ * @brief Get a matrix in the CSR format from a MatrixMarket file.
+ * @param filename PATH to the input file.
+ * @param val A pointer of an array for nonzero values in the CSR format.
+ * @param cind A pointer of an array for column indices in the CSR format.
+ * @param rptr A pointer of an array for starting position of each row.
+ * @param N A variable to receive the number of rows.
+ * @param M A variable to receive the number of columns.
+ * @param shape A variable to receive the shape of the matrix.
+ * @param removeZeros If true, remove zero elements in the off-diagonal.
+ */
 bool ReadMatrixMarket(
     std::string filename, double **val, int **cind, int **rptr,
     int *N, int *M, Shape *shape, bool removeZeros)

@@ -11,12 +11,9 @@
 
 #include "senk_helper.hpp"
 
-/**
- * @brief namespace senk
- */
 namespace senk {
 /**
- * @brief namespace blas1
+ * @brief This namespace contains Level1 BLAS-style functions.
  */
 namespace blas1 {
 /**
@@ -71,11 +68,10 @@ void Axpby(T a, T *x, T b, T *y, int N) {
     for(int i=0; i<N; i++) { y[i] = a * x[i] + b * y[i]; }
 }
 /**
- * @brief Compute z = a * x + b * y.
+ * @brief Compute z = a * x + y.
  * @tparam T The type of vectors.
  * @param a A scalar value.
  * @param x A 1D-array of size N.
- * @param b A scalar value.
  * @param y A 1D-array of size N.
  * @param z A 1D-array of size N.
  * @param N The size of vectors.

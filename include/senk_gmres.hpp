@@ -1,3 +1,9 @@
+/**
+ * @file senk_gmres.hpp
+ * @brief The GMRES solvers are defined.
+ * @author Kengo Suzuki
+ * @date 5/9/2022
+ */
 #ifndef SENK_GMRES_HPP
 #define SENK_GMRES_HPP
 
@@ -6,9 +12,24 @@
 #include "senk_blas2.hpp"
 
 namespace senk {
-
+/**
+ * @brief Contains solvers.
+ */
 namespace solver {
-
+/**
+ * @brief The Non-preconditioned GMRES(m) solver.
+ * @tparam T The type of a coefficient matrix and vectors.
+ * @param val val array of the CSR storage format.
+ * @param cind column index array of the CSR storage format.
+ * @param rptr row pointer array of the CSR storage format.
+ * @param b A right-hand side vector.
+ * @param x An unknown vector.
+ * @param nrm_b The 2-norm of b.
+ * @param outer The maximum number of iterations of outer loop.
+ * @param m The number of the restart period.
+ * @param N The size of the matrix and the vectors.
+ * @param epsilon The convergence criterion.
+ */
 template <typename T>
 void Gmresm(
     T *val, int *cind, int *rptr,
@@ -25,9 +46,9 @@ void Gmresm(
     int flag = 0;
     for(int i=0; i<outer; i++) {
         sparse::SpmvCsr<T>(val, cind, rptr, x, &V[0], N);
-        blas1::Axpby<T>(1, b, -1, &V[0], N);
+        senk::blas1::Axpby<T>(1, b, -1, &V[0], N);
         e[0] = blas1::Nrm2<T>(&V[0], N);
-        blas1::Scal<T>(1/e[0], &V[0], N);
+        senk::blas1::Scal<T>(1/e[0], &V[0], N);
         int j;
         for(j=0; j<m; j++) {
             sparse::SpmvCsr<T>(val, cind, rptr, &V[j*N], &V[(j+1)*N], N);
@@ -67,7 +88,26 @@ void Gmresm(
     delete[] V;
     delete[] y;
 }
-
+/**
+ * @brief The ILU preconditioned GMRES(m) solver.
+ * @tparam T The type of a coefficient matrix and vectors.
+ * @param val val array of the CSR storage format.
+ * @param cind column index array of the CSR storage format.
+ * @param rptr row pointer array of the CSR storage format.
+ * @param lval Same as val, but for the matrix L.
+ * @param lcind Same as cind, but for the matrix L.
+ * @param lrptr Same as rptr, but for the matrix L.
+ * @param uval Same as val, but for the matrix U.
+ * @param ucind Same as cind, but for the matrix U.
+ * @param urptr Same as rptr, but for the matrix U.
+ * @param b A right-hand side vector.
+ * @param x An unknown vector.
+ * @param nrm_b The 2-norm of b.
+ * @param outer The maximum number of iterations of outer loop.
+ * @param m The number of the restart period.
+ * @param N The size of the matrix and the vectors.
+ * @param epsilon The convergence criterion.
+ */
 template <typename T>
 void IluGmresm(
     T *val, int *cind, int *rptr,
@@ -137,7 +177,26 @@ void IluGmresm(
     delete[] y;
     delete[] t;
 }
-
+/**
+ * @brief The ILUB preconditioned GMRES(m) solver.
+ * @tparam T The type of a coefficient matrix and vectors.
+ * @param val val array of the CSR storage format.
+ * @param cind column index array of the CSR storage format.
+ * @param rptr row pointer array of the CSR storage format.
+ * @param blval values of L in the BCSR format.
+ * @param blcind colum positions of blocks of L in the BCSR format.
+ * @param blrptr starting positions of row blocks of L in the BCSR format.
+ * @param buval values of U in the BCSR format.
+ * @param bucind colum positions of blocks of U in the BCSR format.
+ * @param burptr starting positions of row blocks of U in the BCSR format.
+ * @param b A right-hand side vector.
+ * @param x An unknown vector.
+ * @param nrm_b The 2-norm of b.
+ * @param outer The maximum number of iterations of outer loop.
+ * @param m The number of the restart period.
+ * @param N The size of the matrix and the vectors.
+ * @param epsilon The convergence criterion.
+ */
 template <typename T, int bnl, int bnw>
 void IlubGmresm(
     T *val, int *cind, int *rptr,

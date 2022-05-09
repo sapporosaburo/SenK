@@ -7,12 +7,9 @@
 #ifndef SENK_BLAS2_HPP
 #define SENK_BLAS2_HPP
 
-/**
- * @brief namespace senk
- */
 namespace senk {
 /**
- * @brief namespace blas2
+ * @brief This namespace contains Level2 BLAS-style functions.
  */
 namespace blas2 {
 /**

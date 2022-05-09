@@ -1,12 +1,29 @@
+/**
+ * @file senk_graph.hpp
+ * @brief Functions related to the graph theory are written.
+ * @author Kengo Suzuki
+ * @date 5/9/2022
+ */
 #ifndef SENK_GRAPH_HPP
 #define SENK_GRAPH_HPP
 
 #include "senk_utils.hpp"
 
 namespace senk {
-
+/**
+ * @brief Contains functions related to the graph theory.
+ */
 namespace graph {
-
+/**
+ * @brief Partition a input graph into blocks
+ * @param cind An array that stores column indices.
+ * @param rptr An array that stores row pointer.
+ * @param b_cind A pointer to an array that stores column indices of the resulting blocked matrix.
+ * @param b_rptr A pointer to an array that stores row pointer of the resulting blocked matrix.
+ * @param block A pointer to an array that maps the original index to the block.
+ * @param N The size of a input graph (matrix)
+ * @param bsize The size of the block.
+ */
 void Blocking( // Simple Blocking
     int *cind, int *rptr,
     int **b_cind, int **b_rptr, int **block,
@@ -47,7 +64,15 @@ void Blocking( // Simple Blocking
         (*b_rptr)[i/bsize+1] = cnt;
     }
 }
-
+/**
+ * @brief Create an adjacency matrix from a input matrix.
+ * @param cind An array that stores column indices.
+ * @param rptr An array that stores row pointer.
+ * @param am_cind A pointer to an array that stores column indices of the resulting adjacency matrix.
+ * @param am_rptr A pointer to an array that stores row pointer of the resulting adjacency matrix.
+ * @param N The size of a input graph (matrix)
+ * @param isSym It true, a procedure for symmetric matrices is performed.
+ */
 void GetAdjacency(
     int *cind, int *rptr,
     int **am_cind, int **am_rptr,
@@ -108,9 +133,16 @@ void GetAdjacency(
         free(len);
     }
 }
-
+/**
+ * @brief Coloring an adjacency matrix from a input matrix.
+ * @param cind An array that stores column indices.
+ * @param rptr An array that stores row pointer.
+ * @param color A pointer to an array that maps indices to colors.
+ * @param num_color An array that stores the number of indices in each color. 
+ * @param N The size of a input graph (matrix)
+ */
 void Coloring( // Greedy Coloring
-    int *am_cind, int *am_rptr, int **color, int *num_color, int N)
+    int *cind, int *rptr, int **color, int *num_color, int N)
 {
     *color = utils::SafeCalloc<int>(N);
     int *visit = utils::SafeCalloc<int>(N);
@@ -121,8 +153,8 @@ void Coloring( // Greedy Coloring
             if(visit[i] == now || (*color)[i] != 0) continue;
             (*color)[i] = now;
             cnt++;
-            for(int j=am_rptr[i]; j<am_rptr[i+1]; j++) {
-                visit[am_cind[j]] = now;
+            for(int j=rptr[i]; j<rptr[i+1]; j++) {
+                visit[cind[j]] = now;
             }
         }
         now++;
@@ -130,7 +162,17 @@ void Coloring( // Greedy Coloring
     *num_color = now - 1;
     free(visit);
 }
-
+/**
+ * @brief Create an permutation matrix based on the AMC technique.
+ * @param cind An array that stores column indices.
+ * @param rptr An array that stores row pointer.
+ * @param num_color A variable to receive the number of colors.
+ * @param size_color A pointer to receive the size of each color.
+ * @param LP A pointer to the resulting vector representing the left permutation matrix.
+ * @param RP A pointer to the resulting vector representing the right permutation matrix.
+ * @param N The size of the input graph (matrix)
+ * @param isSym Whether the input matrix is symmetric or not.
+ */
 void GetAMCPermutation(
     int *cind, int *rptr,
     int *num_color, int **size_color, int **LP, int **RP,
@@ -159,7 +201,18 @@ void GetAMCPermutation(
     *RP = utils::SafeMalloc<int>(N);
     for(int i=0; i<N; i++) {(*RP)[(*LP)[i]] = i;}
 }
-
+/**
+ * @brief Create an permutation matrix based on the ABMC technique.
+ * @param cind An array that stores column indices.
+ * @param rptr An array that stores row pointer.
+ * @param num_color A variable to receive the number of colors.
+ * @param size_color A pointer to receive the size of each color.
+ * @param LP A pointer to the resulting vector representing the left permutation matrix.
+ * @param RP A pointer to the resulting vector representing the right permutation matrix.
+ * @param N The size of the input graph (matrix)
+ * @param bsize The size of the block.
+ * @param isSym Whether the input matrix is symmetric or not.
+ */
 void GetABMCPermutation(
     int *cind, int *rptr,
     int *num_color, int **size_color, int **LP, int **RP,

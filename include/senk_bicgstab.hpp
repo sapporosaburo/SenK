@@ -2,7 +2,7 @@
  * @file senk_bicgstab.hpp
  * @brief The BiCGStab method is defined.
  * @author Kengo Suzuki
- * @data 5/8/2021
+ * @date 5/8/2021
  */
 #ifndef SENK_BICGSTAB_HPP
 #define SENK_BICGSTAB_HPP
@@ -11,9 +11,7 @@
 #include "senk_blas1.hpp"
 
 namespace senk {
-/**
- * @brief namespace solver.
- */
+
 namespace solver {
 /**
  * @brief Non-preconditioned BiCGStab solver
@@ -21,10 +19,10 @@ namespace solver {
  * @param val val array of the CSR storage format.
  * @param cind col-index array of the CSR storage format.
  * @param rptr row-ptr array of the CSR storage format.
- * @param b right-hand side vector.
- * @param x unknown vector.
+ * @param b The right-hand side vector.
+ * @param x The unknown vector.
  * @param nrm_b The 2-norm of b.
- * @param max_iter Maximum number of iterations.
+ * @param max_iter The maximum number of iterations.
  * @param N The size of the matrix and the vectors.
  * @param epsilon The convergence criterion.
  */
@@ -99,10 +97,10 @@ void Bicgstab(
  * @param uval Same as val, but for the matrix U.
  * @param ucind Same as cind, but for the matrix U.
  * @param urptr Same as rptr, but for the matrix U.
- * @param b right-hand side vector.
- * @param x unknown vector.
+ * @param b The right-hand side vector.
+ * @param x The unknown vector.
  * @param nrm_b The 2-norm of b.
- * @param max_iter Maximum number of iterations.
+ * @param max_iter The maximum number of iterations.
  * @param N The size of the matrix and the vectors.
  * @param epsilon The convergence criterion.
  */
@@ -184,16 +182,16 @@ void IluBicgstab(
  * @param val val array of the CSR storage format.
  * @param cind col-index array of the CSR storage format.
  * @param rptr row-ptr array of the CSR storage format.
- * @param lval Same as val, but for the matrix L.
- * @param lcind Same as cind, but for the matrix L.
- * @param lrptr Same as rptr, but for the matrix L.
- * @param uval Same as val, but for the matrix U.
- * @param ucind Same as cind, but for the matrix U.
- * @param urptr Same as rptr, but for the matrix U.
- * @param b right-hand side vector.
- * @param x unknown vector.
+ * @param blval values of L in the BCSR format.
+ * @param blcind colum positions of blocks of L in the BCSR format.
+ * @param blrptr starting positions of row blocks of L in the BCSR format.
+ * @param buval values of U in the BCSR format.
+ * @param bucind colum positions of blocks of U in the BCSR format.
+ * @param burptr starting positions of row blocks of U in the BCSR format.
+ * @param b The right-hand side vector.
+ * @param x The unknown vector.
  * @param nrm_b The 2-norm of b.
- * @param max_iter Maximum number of iterations.
+ * @param max_iter The maximum number of iterations.
  * @param N The size of the matrix and the vectors.
  * @param epsilon The convergence criterion.
  */

@@ -1,10 +1,32 @@
+/**
+ * @file senk_gcr.hpp
+ * @brief The GCR solvers are defined.
+ * @author Kengo Suzuki
+ * @date 5/9/2022
+ */
 #ifndef SENK_GCR_HPP
 #define SENK_GCR_HPP
+
+#include "senk_sparse.hpp"
+#include "senk_blas1.hpp"
 
 namespace senk {
 
 namespace solver {
-
+/**
+ * @brief The Non-preconditioned GCR(m) solver.
+ * @tparam T The type of a coefficient matrix and vectors.
+ * @param val val array of the CSR storage format.
+ * @param cind column index array of the CSR storage format.
+ * @param rptr row pointer array of the CSR storage format.
+ * @param b A right-hand side vector.
+ * @param x An unknown vector.
+ * @param nrm_b The 2-norm of b.
+ * @param outer The maximum number of iterations of outer loop.
+ * @param m The number of the restart period.
+ * @param N The size of the matrix and the vectors.
+ * @param epsilon The convergence criterion.
+ */
 template <typename T>
 void Gcrm(
     T *val, int *cind, int *rptr,
@@ -48,7 +70,26 @@ void Gcrm(
     delete[] Ar;
     delete[] dot_Ap;
 }
-
+/**
+ * @brief The ILU preconditioned GCR(m) solver.
+ * @tparam T The type of a coefficient matrix and vectors.
+ * @param val val array of the CSR storage format.
+ * @param cind column index array of the CSR storage format.
+ * @param rptr row pointer array of the CSR storage format.
+ * @param lval Same as val, but for the matrix L.
+ * @param lcind Same as cind, but for the matrix L.
+ * @param lrptr Same as rptr, but for the matrix L.
+ * @param uval Same as val, but for the matrix U.
+ * @param ucind Same as cind, but for the matrix U.
+ * @param urptr Same as rptr, but for the matrix U.
+ * @param b A right-hand side vector.
+ * @param x An unknown vector.
+ * @param nrm_b The 2-norm of b.
+ * @param outer The maximum number of iterations of outer loop.
+ * @param m The number of the restart period.
+ * @param N The size of the matrix and the vectors.
+ * @param epsilon The convergence criterion.
+ */
 template <typename T>
 void IluGcrm(
     T *val, int *cind, int *rptr,
@@ -99,7 +140,26 @@ void IluGcrm(
     delete[] AKr;
     delete[] dot_Ap;
 }
-
+/**
+ * @brief The ILUB preconditioned GCR(m) solver.
+ * @tparam T The type of a coefficient matrix and vectors.
+ * @param val val array of the CSR storage format.
+ * @param cind column index array of the CSR storage format.
+ * @param rptr row pointer array of the CSR storage format.
+ * @param blval values of L in the BCSR format.
+ * @param blcind colum positions of blocks of L in the BCSR format.
+ * @param blrptr starting positions of row blocks of L in the BCSR format.
+ * @param buval values of U in the BCSR format.
+ * @param bucind colum positions of blocks of U in the BCSR format.
+ * @param burptr starting positions of row blocks of U in the BCSR format.
+ * @param b A right-hand side vector.
+ * @param x An unknown vector.
+ * @param nrm_b The 2-norm of b.
+ * @param outer The maximum number of iterations of outer loop.
+ * @param m The number of the restart period.
+ * @param N The size of the matrix and the vectors.
+ * @param epsilon The convergence criterion.
+ */
 template <typename T, int bnl, int bnw>
 void IlubGcrm(
     T *val, int *cind, int *rptr,

@@ -1,17 +1,31 @@
+/**
+ * @file senk_matrix.hpp
+ * @brief Functions related (sparse) matrices are defined.
+ * @author Kengo Suzuki
+ * @date 5/9/2022
+ */
 #ifndef SENK_MATRIX_HPP
 #define SENK_MATRIX_HPP
 
 #include <cstdio>
 #include <cstring>
-//#include <omp.h>
 
 #include "senk_utils.hpp"
 #include "senk_class.hpp"
 
 namespace senk {
-
+/**
+ * @brief Functions related to matrix are located in namespace matrix.
+ */
 namespace matrix {
-
+/**
+ * @brief Remove zero elements form an input matrix.
+ * @tparam The Type of the input matrix.
+ * @param val The pointer to the array storing val in the CSR format.
+ * @param cind The pointer to the array storing column index in the CSR format.
+ * @param rptr The pointer to the array storing row pointer in the CSR format.
+ * @param N The size of the input matrix.
+ */
 template <typename T>
 void RemoveZeros(T **val, int **cind, int *rptr, int N)
 {

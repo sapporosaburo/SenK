@@ -1,20 +1,27 @@
+/**
+ * @file senk_sparse.hpp
+ * @brief Functions related to sparse matrices are written.
+ * @author Kengo Suzuki
+ * @date 5/9/2022
+ */
 #ifndef SENK_SPARSE_HPP
 #define SENK_SPARSE_HPP
 
-#include <vector>
-#include <iostream>
-//#include <omp.h>
-
 namespace senk {
-
+/**
+ * @brief Functions related to sparse matrices and sparse vectors are defined.
+ */
 namespace sparse {
-
-enum Triangle {
-    Upper,
-    Lower,
-    UnitLower
-};
-
+/**
+ * @brief Perform SpMV using the CSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @param val A val array in the CSR format.
+ * @param cind A col-index array in the CSR format.
+ * @param rptr A row-pointer array in the CSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ */
 template <typename T> inline
 void SpmvCsr(T *val, int *cind, int *rptr, T *x, T *y, int N) {
     #pragma omp parallel for
@@ -26,7 +33,17 @@ void SpmvCsr(T *val, int *cind, int *rptr, T *x, T *y, int N) {
         y[i] = temp;
     }
 }
-
+/**
+ * @brief Perform SpMV using the CSR format, which stores diagonal elements separately.
+ * @tparam T The Type of the matrix and the vectors.
+ * @param val A val array in the CSR format.
+ * @param cind A col-index array in the CSR format.
+ * @param rptr A row-pointer array in the CSR format.
+ * @param diag An array that stores diagonal elements.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ */
 template <typename T> inline
 void SpmvCsr(T *val, int *cind, int *rptr, T *diag, T *x, T *y, int N) {
     #pragma omp parallel for
@@ -38,7 +55,17 @@ void SpmvCsr(T *val, int *cind, int *rptr, T *diag, T *x, T *y, int N) {
         y[i] = temp;
     }
 }
-
+/**
+ * @brief Perform SpMV using the sliced-ELLPACK (SELL-c) format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @param val A val array in the SELL-c format.
+ * @param cind A col-index array in the SELL-c format.
+ * @param wid An array that indicates the starting position of the slices.
+ * @param len The size of the slices.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ */
 template <typename T> inline
 void SpmvSell(T *val, int *cind, int *wid, int len, T *x, T *y, int N)
 {
@@ -58,7 +85,16 @@ void SpmvSell(T *val, int *cind, int *wid, int len, T *x, T *y, int N)
         }
     }
 }
-
+/**
+ * @brief Perform the sparse lower triangular solve for a matrix stored in the CSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @param val A val array in the CSR format.
+ * @param cind A col-index array in the CSR format.
+ * @param rptr A row-pointer array in the CSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ */
 template <typename T> inline
 void SptrsvCsr_l(T *val, int *cind, int *rptr, T *x, T *y, int N)
 {
@@ -71,7 +107,16 @@ void SptrsvCsr_l(T *val, int *cind, int *rptr, T *x, T *y, int N)
         y[i] = temp;
     }
 }
-
+/**
+ * @brief Perform the sparse upper triangular solve for a matrix stored in the CSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @param val A val array in the CSR format.
+ * @param cind A col-index array in the CSR format.
+ * @param rptr A row-pointer array in the CSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ */
 template <typename T> inline
 void SptrsvCsr_u(T *val, int *cind, int *rptr, T *x, T *y, int N)
 {
@@ -86,7 +131,18 @@ void SptrsvCsr_u(T *val, int *cind, int *rptr, T *x, T *y, int N)
         y[i] = temp * val[j];
     }
 }
-
+/**
+ * @brief Perform the sparse lower triangular solve for a matrix stored in the BCSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @tparam bnl The number of rows of the block.
+ * @tparam bnw The number of columns of the block.
+ * @param bval A val array in the BCSR format.
+ * @param bcind A block col-index array in the BCSR format.
+ * @param brptr A block row-pointer array in the BCSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ */
 template <typename T, int bnl, int bnw> inline
 void SptrsvBcsr_l(
     T *bval, int *bcind, int *brptr, 
@@ -100,7 +156,6 @@ void SptrsvBcsr_l(
         for(int j=0; j<bnl; j++) {
             y[i+j] = x[i+j];
         }
-        //最後の2つが対角ブロック
         for(int j=brptr[bidx]; j<brptr[bidx+1]; j++) {
             int x_ind = bcind[j]*bnw;
             for(int l=0; l<bnw; l++) {
@@ -113,7 +168,18 @@ void SptrsvBcsr_l(
         }
     }
 }
-
+/**
+ * @brief Perform the sparse upper triangular solve for a matrix stored in the CSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @tparam bnl The number of rows of the block.
+ * @tparam bnw The number of columns of the block.
+ * @param bval A val array in the BCSR format.
+ * @param bcind A block col-index array in the BCSR format.
+ * @param brptr A block row-pointer array in the BCSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ */
 template <typename T, int bnl, int bnw> inline
 void SptrsvBcsr_u(
     T *bval, int *bcind, int *brptr,
@@ -151,7 +217,8 @@ void SptrsvBcsr_u(
         }
     }
 }
-
+// ---- experimental ---- //
+/*
 void SpmmCscCsc(
     double *l_val, int *l_rind, int *l_cptr,
     double *r_val, int *r_rind, int *r_cptr,
@@ -231,7 +298,7 @@ void SptrsvCsr(
             std::exit(1);
     }
 }
-
+*/
 }
 
 }

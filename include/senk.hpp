@@ -18,4 +18,9 @@
 #include "senk_gmres.hpp"
 #include "senk_gcr.hpp"
 
+/**
+ * @namespace senk
+ * @brief The top-level namespace of SenK.
+ */
+
 #endif
