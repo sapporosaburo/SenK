@@ -6,4 +6,4 @@ For more details, see [the GitHub pages site](https://sapporosaburo.github.io/Se
 
 ## License
 
-This library is released under the MIT License, see LICENSE.
+This library is released under the MIT License, see [LICENSE](./LICENSE).
