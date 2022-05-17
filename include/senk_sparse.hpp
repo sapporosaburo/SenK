@@ -86,7 +86,7 @@ void SpmvSell(T *val, int *cind, int *wid, int len, T *x, T *y, int N)
     }
 }
 /**
- * @brief Perform the sparse lower triangular solve for a matrix stored in the CSR format.
+ * @brief Perform the sparse lower triangular solve on a matrix stored in the CSR format.
  * @tparam T The Type of the matrix and the vectors.
  * @param val A val array in the CSR format.
  * @param cind A col-index array in the CSR format.
@@ -108,7 +108,7 @@ void SptrsvCsr_l(T *val, int *cind, int *rptr, T *x, T *y, int N)
     }
 }
 /**
- * @brief Perform the sparse upper triangular solve for a matrix stored in the CSR format.
+ * @brief Perform the sparse upper triangular solve on a matrix stored in the CSR format.
  * @tparam T The Type of the matrix and the vectors.
  * @param val A val array in the CSR format.
  * @param cind A col-index array in the CSR format.
@@ -120,7 +120,7 @@ void SptrsvCsr_l(T *val, int *cind, int *rptr, T *x, T *y, int N)
 template <typename T> inline
 void SptrsvCsr_u(T *val, int *cind, int *rptr, T *x, T *y, int N)
 {
-    // L is assumed to be general upper triangular.
+    // U is assumed to be general upper triangular.
     // Diagonal has been inverted.
     for(int i=N-1; i>=0; i--) {
         T temp = x[i];
@@ -129,6 +129,75 @@ void SptrsvCsr_u(T *val, int *cind, int *rptr, T *x, T *y, int N)
             temp -= val[j] * y[cind[j]];    
         }
         y[i] = temp * val[j];
+    }
+}
+/**
+ * @brief Perform the sparse lower triangular solve in parallel on a AMC ordered matrix stored in the CSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @param val A val array in the CSR format.
+ * @param cind A col-index array in the CSR format.
+ * @param rptr A row-pointer array in the CSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ * @param cptr The starting index of each color is stored.
+ * @param cnum The number of colors.
+ */
+template <typename T> inline
+void SptrsvCsr_l(
+    T *val, int *cind, int *rptr, T *x, T *y,
+    int N, int *cptr, int cnum)
+{
+    // L is assumed to be unit lower triangular.
+    #pragma omp parallel
+    {
+        for(int k=0; k<cnum; k++) {
+            int start = cptr[k];
+            int end = cptr[k+1];
+            #pragma omp for
+            for(int i=start; i<end; i++) {
+                T temp = x[i];
+                for(int j=rptr[i]; j<rptr[i+1]; j++) {
+                    temp -= val[j] * y[cind[j]];
+                }
+                y[i] = temp;
+            }
+        } 
+    }
+}
+/**
+ * @brief Perform the sparse upper triangular solve in parallel on a AMC ordered matrix stored in the CSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @param val A val array in the CSR format.
+ * @param cind A col-index array in the CSR format.
+ * @param rptr A row-pointer array in the CSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ * @param cptr The starting index of each color is stored.
+ * @param cnum The number of colors.
+ */
+template <typename T> inline
+void SptrsvCsr_u(T *val, int *cind, int *rptr, T *x, T *y,
+    int N, int *cptr, int cnum)
+{
+    // U is assumed to be general upper triangular.
+    // Diagonal has been inverted.
+    #pragma omp parallel
+    {
+        for(int k=cnum-1; k>=0; k--) {
+            int start = cptr[k];
+            int end = cptr[k+1];
+            #pragma omp for
+            for(int i=end-1; i>=start; i--) {
+                T temp = x[i];
+                int j;
+                for(j=rptr[i+1]-1; j>=rptr[i]+1; j--) {
+                    temp -= val[j] * y[cind[j]];    
+                }
+                y[i] = temp * val[j];
+            }
+        }
     }
 }
 /**

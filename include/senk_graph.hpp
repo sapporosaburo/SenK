@@ -163,7 +163,7 @@ void Coloring( // Greedy Coloring
     free(visit);
 }
 /**
- * @brief Create an permutation matrix based on the AMC technique.
+ * @brief Create an permutation matrix based on the AMC ordering technique@cite iwashita2002AMC.
  * @param cind An array that stores column indices.
  * @param rptr An array that stores row pointer.
  * @param num_color A variable to receive the number of colors.
@@ -202,7 +202,7 @@ void GetAMCPermutation(
     for(int i=0; i<N; i++) {(*RP)[(*LP)[i]] = i;}
 }
 /**
- * @brief Create an permutation matrix based on the ABMC technique.
+ * @brief Create an permutation matrix based on the ABMC ordering technique@cite iwashita2012ABMC, @cite li2019enhancement.
  * @param cind An array that stores column indices.
  * @param rptr An array that stores row pointer.
  * @param num_color A variable to receive the number of colors.
