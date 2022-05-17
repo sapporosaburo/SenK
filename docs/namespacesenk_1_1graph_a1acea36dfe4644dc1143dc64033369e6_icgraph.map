@@ -1,0 +1,5 @@
+<map id="senk::graph::GetAdjacency" name="senk::graph::GetAdjacency">
+<area shape="rect" id="node1" title="Create an adjacency matrix from a input matrix." alt="" coords="281,31,461,57"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1graph.html#a34bb9ef3c08bcc6f75af1e9df8297467" title="Create an permutation matrix based on the ABMC technique." alt="" coords="5,5,233,32"/>
+<area shape="rect" id="node3" href="$namespacesenk_1_1graph.html#a12242398c9aee41fb5f289eac0274ce2" title="Create an permutation matrix based on the AMC technique." alt="" coords="10,56,229,83"/>
+</map>

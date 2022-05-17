@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,56,159"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1matrix.html#a2c9832f901d0a3ff02afad8cc1ed62a7" title=" " alt="" coords="139,5,297,32"/>
+<area shape="rect" id="node3" href="$namespacesenk_1_1graph.html#a34bb9ef3c08bcc6f75af1e9df8297467" title="Create an permutation matrix based on the ABMC technique." alt="" coords="104,56,332,83"/>
+<area shape="rect" id="node7" href="$namespacesenk_1_1blas1.html#a84f3c9c3723e38de5a46b40bfef0de2e" title="Compute the 2&#45;norm of x." alt="" coords="153,107,283,133"/>
+<area shape="rect" id="node8" href="$namespacesenk_1_1matrix.html#ab7542d30f6e135d4eb7ff6f38e0f93d9" title=" " alt="" coords="143,157,293,184"/>
+<area shape="rect" id="node9" href="$namespacesenk_1_1io.html#af48a46954141d52a15acf425f4875e01" title="Get a matrix in the CSR format from a MatrixMarket file." alt="" coords="127,208,309,235"/>
+<area shape="rect" id="node10" href="$namespacesenk_1_1test.html#a65d1da3717138bddb46661376a09c9b2" title=" " alt="" coords="125,259,311,301"/>
+<area shape="rect" id="node4" href="$namespacesenk_1_1graph.html#a91835e9d124ef3e30d1ede5dc12a1638" title="Partition a input graph into blocks." alt="" coords="396,5,544,32"/>
+<area shape="rect" id="node5" href="$namespacesenk_1_1graph.html#abfa3c46e810a6dcd28c52c93a13f987a" title="Coloring an adjacency matrix from a input matrix." alt="" coords="397,56,543,83"/>
+<area shape="rect" id="node6" href="$namespacesenk_1_1graph.html#a1acea36dfe4644dc1143dc64033369e6" title="Create an adjacency matrix from a input matrix." alt="" coords="380,107,560,133"/>
+</map>

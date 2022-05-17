@@ -1,0 +1,5 @@
+<map id="senk::graph::Coloring" name="senk::graph::Coloring">
+<area shape="rect" id="node1" title="Coloring an adjacency matrix from a input matrix." alt="" coords="281,67,428,93"/>
+<area shape="rect" id="node2" href="$senk__graph_8hpp.html#a34bb9ef3c08bcc6f75af1e9df8297467" title="Create an permutation matrix based on the ABMC technique." alt="" coords="5,29,233,56"/>
+<area shape="rect" id="node3" href="$senk__graph_8hpp.html#a12242398c9aee41fb5f289eac0274ce2" title="Create an permutation matrix based on the AMC technique." alt="" coords="10,104,229,131"/>
+</map>

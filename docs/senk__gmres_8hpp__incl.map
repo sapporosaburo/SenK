@@ -1,0 +1,8 @@
+<map id="include/senk_gmres.hpp" name="include/senk_gmres.hpp">
+<area shape="rect" id="node1" title="The GMRES solvers are defined." alt="" coords="126,5,289,32"/>
+<area shape="rect" id="node2" href="$senk__sparse_8hpp.html" title="Functions related to sparse matrices are written." alt="" coords="5,80,127,107"/>
+<area shape="rect" id="node3" href="$senk__blas1_8hpp.html" title="Level1 BLAS&#45;style functions are written." alt="" coords="151,80,264,107"/>
+<area shape="rect" id="node6" href="$senk__blas2_8hpp.html" title="Level2 BLAS&#45;style functions are written." alt="" coords="288,80,401,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="122,155,181,181"/>
+<area shape="rect" id="node5" href="$senk__helper_8hpp.html" title="Some supplemental functions are defined." alt="" coords="205,155,321,181"/>
+</map>

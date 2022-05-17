@@ -1,0 +1,10 @@
+<map id="include/senk_helper.hpp" name="include/senk_helper.hpp">
+<area shape="rect" id="node1" title="Some supplemental functions are defined." alt="" coords="490,5,651,32"/>
+<area shape="rect" id="node2" href="$senk__blas1_8hpp.html" title="Level1 BLAS&#45;style functions are written." alt="" coords="375,80,534,107"/>
+<area shape="rect" id="node8" href="$senk__io_8hpp.html" title="Functions related to inputs and outputs are defined." alt="" coords="618,80,755,107"/>
+<area shape="rect" id="node3" href="$senk__bicgstab_8hpp.html" title="The BiCGStab method is defined." alt="" coords="5,155,181,181"/>
+<area shape="rect" id="node5" href="$senk__gcr_8hpp.html" title="The GCR solvers are defined." alt="" coords="205,155,349,181"/>
+<area shape="rect" id="node6" href="$senk__gmres_8hpp.html" title="The GMRES solvers are defined." alt="" coords="373,155,536,181"/>
+<area shape="rect" id="node7" href="$senk__test_8hpp_source.html" title=" " alt="" coords="560,155,709,181"/>
+<area shape="rect" id="node4" href="$senk_8hpp.html" title="Top&#45;level header." alt="" coords="305,229,425,256"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,208,56,235"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1matrix.html#aea23d52979ae3a016e3f4b11464678a6" title=" " alt="" coords="104,5,297,32"/>
+<area shape="rect" id="node3" href="$namespacesenk_1_1matrix.html#a2c9832f901d0a3ff02afad8cc1ed62a7" title=" " alt="" coords="122,56,279,83"/>
+<area shape="rect" id="node4" href="$namespacesenk_1_1matrix.html#a90bb3f05ec59e90df7ac6dfed3e4c5d0" title=" " alt="" coords="127,107,274,133"/>
+<area shape="rect" id="node5" href="$namespacesenk_1_1matrix.html#a4d4ad924ae8d174ff33d614a2a614885" title=" " alt="" coords="139,157,262,184"/>
+<area shape="rect" id="node6" href="$namespacesenk_1_1blas1.html#a84f3c9c3723e38de5a46b40bfef0de2e" title="Compute the 2&#45;norm of x." alt="" coords="136,208,265,235"/>
+<area shape="rect" id="node7" href="$namespacesenk_1_1matrix.html#ab7542d30f6e135d4eb7ff6f38e0f93d9" title=" " alt="" coords="126,259,275,285"/>
+<area shape="rect" id="node8" href="$namespacesenk_1_1io.html#af48a46954141d52a15acf425f4875e01" title="Get a matrix in the CSR format from a MatrixMarket file." alt="" coords="109,309,292,336"/>
+<area shape="rect" id="node9" href="$namespacesenk_1_1test.html#a65d1da3717138bddb46661376a09c9b2" title=" " alt="" coords="107,361,294,402"/>
+<area shape="rect" id="node10" href="$namespacesenk_1_1matrix.html#aa5d22d7383389cab2edbe8d63e16deab" title=" " alt="" coords="137,427,265,453"/>
+</map>

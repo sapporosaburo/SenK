@@ -1,0 +1,10 @@
+<map id="senk::matrix::AllocLevelZero" name="senk::matrix::AllocLevelZero">
+<area shape="rect" id="node1" title=" " alt="" coords="5,177,193,203"/>
+<area shape="rect" id="node2" href="$classsenk_1_1sparse_1_1_sp_vec.html#ae9c1f4bd4523b6e11da94b1ad559374a" title="Append argument values to the arrays." alt="" coords="241,5,385,47"/>
+<area shape="rect" id="node4" href="$classsenk_1_1sparse_1_1_sp_vec.html#a0e75f5f512664109f7524f27f8e2498e" title="Set the value of len to 0." alt="" coords="241,71,385,112"/>
+<area shape="rect" id="node5" href="$classsenk_1_1sparse_1_1_sp_vec.html#a9e2d450ad61d83c5600b3fb9712d0874" title="Return i&#45;th value of idx." alt="" coords="241,136,385,177"/>
+<area shape="rect" id="node6" href="$classsenk_1_1sparse_1_1_sp_vec.html#a418f705f9043be6c4bd84eaba5ce828b" title="Return len." alt="" coords="241,201,385,243"/>
+<area shape="rect" id="node7" href="$classsenk_1_1sparse_1_1_sp_vec.html#accbdfa281548ad6042fb002798b6ab80" title="Return i&#45;th value of lev." alt="" coords="241,267,385,308"/>
+<area shape="rect" id="node8" href="$classsenk_1_1sparse_1_1_sp_vec.html#ad1c9855c996a8beac502786a16f00c74" title="Return i&#45;th value of val." alt="" coords="241,332,385,373"/>
+<area shape="rect" id="node3" href="$namespacesenk_1_1utils.html#aed477a53d2767355473dd2495b87c159" title="Reallocate memory." alt="" coords="433,13,595,39"/>
+</map>

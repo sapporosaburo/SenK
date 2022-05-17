@@ -1,0 +1,4 @@
+<map id="senk::graph::Blocking" name="senk::graph::Blocking">
+<area shape="rect" id="node1" title="Partition a input graph into blocks." alt="" coords="281,29,429,56"/>
+<area shape="rect" id="node2" href="$senk__graph_8hpp.html#a34bb9ef3c08bcc6f75af1e9df8297467" title="Create an permutation matrix based on the ABMC technique." alt="" coords="5,29,233,56"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="senk::sparse::SpVec::~SpVec" name="senk::sparse::SpVec::~SpVec">
+<area shape="rect" id="node1" title="Destructor." alt="" coords="5,5,149,47"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1utils.html#a7138a4237e3b1c437f90e62604750815" title="Free allocated memory." alt="" coords="197,13,340,39"/>
+</map>

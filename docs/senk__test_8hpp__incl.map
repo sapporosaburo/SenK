@@ -1,0 +1,7 @@
+<map id="include/senk_test.hpp" name="include/senk_test.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="87,5,236,32"/>
+<area shape="rect" id="node2" href="$senk__blas1_8hpp.html" title="Level1 BLAS&#45;style functions are written." alt="" coords="34,80,147,107"/>
+<area shape="rect" id="node5" href="$senk__sparse_8hpp.html" title="Functions related to sparse matrices are written." alt="" coords="171,80,293,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,64,181"/>
+<area shape="rect" id="node4" href="$senk__helper_8hpp.html" title="Some supplemental functions are defined." alt="" coords="89,155,205,181"/>
+</map>

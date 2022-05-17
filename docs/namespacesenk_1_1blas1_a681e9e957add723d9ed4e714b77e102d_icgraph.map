@@ -1,0 +1,4 @@
+<map id="senk::blas1::Scal" name="senk::blas1::Scal">
+<area shape="rect" id="node1" title="Multiply x by a." alt="" coords="225,5,348,32"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1solver.html#a8ccd0546dd6e1580dee75d3de1f93fda" title="The ILUB preconditioned GMRES(m) solver." alt="" coords="5,5,177,32"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="include/senk_sparse.hpp" name="include/senk_sparse.hpp">
+<area shape="rect" id="node1" title="Functions related to sparse matrices are written." alt="" coords="282,5,449,32"/>
+<area shape="rect" id="node2" href="$senk__bicgstab_8hpp.html" title="The BiCGStab method is defined." alt="" coords="5,80,181,107"/>
+<area shape="rect" id="node4" href="$senk__gcr_8hpp.html" title="The GCR solvers are defined." alt="" coords="205,80,349,107"/>
+<area shape="rect" id="node5" href="$senk__gmres_8hpp.html" title="The GMRES solvers are defined." alt="" coords="373,80,536,107"/>
+<area shape="rect" id="node6" href="$senk__test_8hpp_source.html" title=" " alt="" coords="560,80,709,107"/>
+<area shape="rect" id="node3" href="$senk_8hpp.html" title="Top&#45;level header." alt="" coords="217,155,337,181"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="senk::solver::IlubGmresm" name="senk::solver::IlubGmresm">
+<area shape="rect" id="node1" title="The ILUB preconditioned GMRES(m) solver." alt="" coords="5,5,177,32"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1blas1.html#a681e9e957add723d9ed4e714b77e102d" title="Multiply x by a." alt="" coords="225,5,348,32"/>
+</map>

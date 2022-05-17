@@ -1,0 +1,5 @@
+<map id="senk::graph::GetAMCPermutation" name="senk::graph::GetAMCPermutation">
+<area shape="rect" id="node1" title="Create an permutation matrix based on the AMC technique." alt="" coords="5,67,224,93"/>
+<area shape="rect" id="node2" href="$senk__graph_8hpp.html#abfa3c46e810a6dcd28c52c93a13f987a" title="Coloring an adjacency matrix from a input matrix." alt="" coords="289,29,435,56"/>
+<area shape="rect" id="node3" href="$senk__graph_8hpp.html#a1acea36dfe4644dc1143dc64033369e6" title="Create an adjacency matrix from a input matrix." alt="" coords="272,104,452,131"/>
+</map>

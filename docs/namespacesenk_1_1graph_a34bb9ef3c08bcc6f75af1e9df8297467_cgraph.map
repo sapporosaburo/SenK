@@ -1,0 +1,6 @@
+<map id="senk::graph::GetABMCPermutation" name="senk::graph::GetABMCPermutation">
+<area shape="rect" id="node1" title="Create an permutation matrix based on the ABMC technique." alt="" coords="5,56,233,83"/>
+<area shape="rect" id="node2" href="$namespacesenk_1_1graph.html#a91835e9d124ef3e30d1ede5dc12a1638" title="Partition a input graph into blocks." alt="" coords="297,5,445,32"/>
+<area shape="rect" id="node3" href="$namespacesenk_1_1graph.html#abfa3c46e810a6dcd28c52c93a13f987a" title="Coloring an adjacency matrix from a input matrix." alt="" coords="298,56,445,83"/>
+<area shape="rect" id="node4" href="$namespacesenk_1_1graph.html#a1acea36dfe4644dc1143dc64033369e6" title="Create an adjacency matrix from a input matrix." alt="" coords="281,107,461,133"/>
+</map>
