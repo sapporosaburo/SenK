@@ -33,6 +33,7 @@ var NAVTREE =
       [ "Implementation status", "index.html#s5", null ],
       [ "ILUB preconditioner", "index.html#s6", null ]
     ] ],
+    [ "Bibliography", "citelist.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

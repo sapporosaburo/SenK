@@ -43,6 +43,7 @@ var namespacesenk =
       [ "RemoveZeros", "namespacesenk_1_1matrix.html#a8b362b8f048064768e2086df22e01061", null ]
     ] ],
     [ "solver", "namespacesenk_1_1solver.html", [
+      [ "AmcIluGmresm", "namespacesenk_1_1solver.html#aef0d6079aafc5f397b48c5a779cdf864", null ],
       [ "Bicgstab", "namespacesenk_1_1solver.html#afd850764d301fc2d993e1f74496ae686", null ],
       [ "Gcrm", "namespacesenk_1_1solver.html#a0b34b94b99f13aff422ea213ae3f4a8c", null ],
       [ "Gmresm", "namespacesenk_1_1solver.html#a49e731ce9f2a75212764790a98a0c269", null ],
