@@ -63,14 +63,14 @@ int main(int argc, char **argv)
     printf("# Reordered!\n");
 
 // Scaling
-    //double *tdiag;
-    //senk::matrix::GetDiag<double>(val, cind, rptr, &tdiag, N);
-    //double *ones = senk::utils::SafeMalloc<double>(N);
-    //for(int i=0; i<N; i++) { 
-    //    tdiag[i] = 1 / std::sqrt(std::abs(tdiag[i]));
-    //}
-    //senk::utils::Set<double>(1.0, ones, N);
-    //senk::matrix::Scaling<double>(val, cind, rptr, tdiag, tdiag, N);
+    double *tdiag;
+    senk::matrix::GetDiag<double>(val, cind, rptr, &tdiag, N);
+    double *ones = senk::utils::SafeMalloc<double>(N);
+    for(int i=0; i<N; i++) { 
+        tdiag[i] = 1 / std::sqrt(std::abs(tdiag[i]));
+    }
+    senk::utils::Set<double>(1.0, ones, N);
+    senk::matrix::Scaling<double>(val, cind, rptr, tdiag, tdiag, N);
 
 // ILU factorization
     senk::matrix::Duplicate(val, cind, rptr, &tval, &tcind, &trptr, N);
