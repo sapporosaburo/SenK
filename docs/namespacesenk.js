@@ -17,10 +17,7 @@ var namespacesenk =
       [ "Trsv", "namespacesenk_1_1blas2.html#a57e768d7950e7df435dddab11a39433d", null ]
     ] ],
     [ "graph", "namespacesenk_1_1graph.html", [
-      [ "Blocking", "namespacesenk_1_1graph.html#a91835e9d124ef3e30d1ede5dc12a1638", null ],
-      [ "Coloring", "namespacesenk_1_1graph.html#abfa3c46e810a6dcd28c52c93a13f987a", null ],
-      [ "GetABMCPermutation", "namespacesenk_1_1graph.html#a34bb9ef3c08bcc6f75af1e9df8297467", null ],
-      [ "GetAdjacency", "namespacesenk_1_1graph.html#a1acea36dfe4644dc1143dc64033369e6", null ],
+      [ "GetABMCPermutation", "namespacesenk_1_1graph.html#a7e03899c327e3ed700438d7afb44e7ac", null ],
       [ "GetAMCPermutation", "namespacesenk_1_1graph.html#a12242398c9aee41fb5f289eac0274ce2", null ]
     ] ],
     [ "helper", "namespacesenk_1_1helper.html", [
@@ -43,6 +40,8 @@ var namespacesenk =
       [ "RemoveZeros", "namespacesenk_1_1matrix.html#a8b362b8f048064768e2086df22e01061", null ]
     ] ],
     [ "solver", "namespacesenk_1_1solver.html", [
+      [ "AbmcIlubGmresm", "namespacesenk_1_1solver.html#ab0ce84d38c9ed2511a95197a35bc5b8e", null ],
+      [ "AbmcIluGmresm", "namespacesenk_1_1solver.html#a1d48de198d47f0ed10565e55a4ce21cf", null ],
       [ "AmcIluGmresm", "namespacesenk_1_1solver.html#aef0d6079aafc5f397b48c5a779cdf864", null ],
       [ "Bicgstab", "namespacesenk_1_1solver.html#afd850764d301fc2d993e1f74496ae686", null ],
       [ "Gcrm", "namespacesenk_1_1solver.html#a0b34b94b99f13aff422ea213ae3f4a8c", null ],

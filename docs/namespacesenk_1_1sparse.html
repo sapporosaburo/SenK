@@ -129,6 +129,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ab615306f780e5c19a760eff9e342050d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1sparse.html#ab615306f780e5c19a760eff9e342050d">SptrsvCsr_u</a> (T *val, int *cind, int *rptr, T *x, T *y, int N, int *cptr, int cnum)</td></tr>
 <tr class="memdesc:ab615306f780e5c19a760eff9e342050d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the sparse upper triangular solve in parallel on a AMC ordered matrix stored in the CSR format.  <a href="namespacesenk_1_1sparse.html#ab615306f780e5c19a760eff9e342050d">More...</a><br /></td></tr>
 <tr class="separator:ab615306f780e5c19a760eff9e342050d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed31e67fee0b0c85d3f85913f49f524"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8ed31e67fee0b0c85d3f85913f49f524"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1sparse.html#a8ed31e67fee0b0c85d3f85913f49f524">SptrsvCsr_l</a> (T *val, int *cind, int *rptr, T *x, T *y, int N, int *cptr, int cnum, int bsize)</td></tr>
+<tr class="memdesc:a8ed31e67fee0b0c85d3f85913f49f524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the sparse lower triangular solve in parallel on a ABMC ordered matrix stored in the CSR format.  <a href="namespacesenk_1_1sparse.html#a8ed31e67fee0b0c85d3f85913f49f524">More...</a><br /></td></tr>
+<tr class="separator:a8ed31e67fee0b0c85d3f85913f49f524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a582f7d397cc56a144fef32a6872fb048"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a582f7d397cc56a144fef32a6872fb048"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1sparse.html#a582f7d397cc56a144fef32a6872fb048">SptrsvCsr_u</a> (T *val, int *cind, int *rptr, T *x, T *y, int N, int *cptr, int cnum, int bsize)</td></tr>
+<tr class="memdesc:a582f7d397cc56a144fef32a6872fb048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the sparse upper triangular solve in parallel on a ABMC ordered matrix stored in the CSR format.  <a href="namespacesenk_1_1sparse.html#a582f7d397cc56a144fef32a6872fb048">More...</a><br /></td></tr>
+<tr class="separator:a582f7d397cc56a144fef32a6872fb048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae52b418c371f42f68b769dd4bf663ad"><td class="memTemplParams" colspan="2">template&lt;typename T , int bnl, int bnw&gt; </td></tr>
 <tr class="memitem:aae52b418c371f42f68b769dd4bf663ad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1sparse.html#aae52b418c371f42f68b769dd4bf663ad">SptrsvBcsr_l</a> (T *bval, int *bcind, int *brptr, T *x, T *y, int N)</td></tr>
 <tr class="memdesc:aae52b418c371f42f68b769dd4bf663ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the sparse lower triangular solve for a matrix stored in the BCSR format.  <a href="namespacesenk_1_1sparse.html#aae52b418c371f42f68b769dd4bf663ad">More...</a><br /></td></tr>
@@ -137,6 +145,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a171e93f8c92820e560f7504f325a7abe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1sparse.html#a171e93f8c92820e560f7504f325a7abe">SptrsvBcsr_u</a> (T *bval, int *bcind, int *brptr, T *x, T *y, int N)</td></tr>
 <tr class="memdesc:a171e93f8c92820e560f7504f325a7abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the sparse upper triangular solve for a matrix stored in the CSR format.  <a href="namespacesenk_1_1sparse.html#a171e93f8c92820e560f7504f325a7abe">More...</a><br /></td></tr>
 <tr class="separator:a171e93f8c92820e560f7504f325a7abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea77caba4dacbe444e648cbbdac7e78"><td class="memTemplParams" colspan="2">template&lt;typename T , int bnl, int bnw&gt; </td></tr>
+<tr class="memitem:aaea77caba4dacbe444e648cbbdac7e78"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1sparse.html#aaea77caba4dacbe444e648cbbdac7e78">SptrsvBcsr_l</a> (T *bval, int *bcind, int *brptr, T *x, T *y, int N, int *cptr, int cnum, int bsize)</td></tr>
+<tr class="memdesc:aaea77caba4dacbe444e648cbbdac7e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the sparse lower triangular solve for a ABMC reordered matrix stored in the BCSR format.  <a href="namespacesenk_1_1sparse.html#aaea77caba4dacbe444e648cbbdac7e78">More...</a><br /></td></tr>
+<tr class="separator:aaea77caba4dacbe444e648cbbdac7e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704fb04cb1684fdabd56c8afb769f01e"><td class="memTemplParams" colspan="2">template&lt;typename T , int bnl, int bnw&gt; </td></tr>
+<tr class="memitem:a704fb04cb1684fdabd56c8afb769f01e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1sparse.html#a704fb04cb1684fdabd56c8afb769f01e">SptrsvBcsr_u</a> (T *bval, int *bcind, int *brptr, T *x, T *y, int N, int *cptr, int cnum, int bsize)</td></tr>
+<tr class="memdesc:a704fb04cb1684fdabd56c8afb769f01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the sparse upper triangular solve for a ABMC reordered matrix stored in the CSR format.  <a href="namespacesenk_1_1sparse.html#a704fb04cb1684fdabd56c8afb769f01e">More...</a><br /></td></tr>
+<tr class="separator:a704fb04cb1684fdabd56c8afb769f01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Functions related to sparse matrices and sparse vectors are defined. </p>
@@ -405,7 +421,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="aae52b418c371f42f68b769dd4bf663ad" name="aae52b418c371f42f68b769dd4bf663ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae52b418c371f42f68b769dd4bf663ad">&#9670;&nbsp;</a></span>SptrsvBcsr_l()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aae52b418c371f42f68b769dd4bf663ad">&#9670;&nbsp;</a></span>SptrsvBcsr_l() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -485,12 +501,118 @@ template&lt;typename T , int bnl, int bnw&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="senk__sparse_8hpp_source.html#l00216">216</a> of file <a class="el" href="senk__sparse_8hpp_source.html">senk_sparse.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="senk__sparse_8hpp_source.html#l00295">295</a> of file <a class="el" href="senk__sparse_8hpp_source.html">senk_sparse.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aaea77caba4dacbe444e648cbbdac7e78" name="aaea77caba4dacbe444e648cbbdac7e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea77caba4dacbe444e648cbbdac7e78">&#9670;&nbsp;</a></span>SptrsvBcsr_l() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int bnl, int bnw&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void senk::sparse::SptrsvBcsr_l </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>bval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>bcind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>brptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform the sparse lower triangular solve for a ABMC reordered matrix stored in the BCSR format. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The Type of the matrix and the vectors. </td></tr>
+    <tr><td class="paramname">bnl</td><td>The number of rows of the block. </td></tr>
+    <tr><td class="paramname">bnw</td><td>The number of columns of the block. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bval</td><td>A val array in the BCSR format. </td></tr>
+    <tr><td class="paramname">bcind</td><td>A block col-index array in the BCSR format. </td></tr>
+    <tr><td class="paramname">brptr</td><td>A block row-pointer array in the BCSR format. </td></tr>
+    <tr><td class="paramname">x</td><td>Input vector of size N. </td></tr>
+    <tr><td class="paramname">y</td><td>Output vector of size N. </td></tr>
+    <tr><td class="paramname">N</td><td>The size of vectors. </td></tr>
+    <tr><td class="paramname">cptr</td><td>The starting index of each color is stored. </td></tr>
+    <tr><td class="paramname">cnum</td><td>The number of colors. </td></tr>
+    <tr><td class="paramname">bsize</td><td>The number of rows/columns of the blocks used in ABMC. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="senk__sparse_8hpp_source.html#l00384">384</a> of file <a class="el" href="senk__sparse_8hpp_source.html">senk_sparse.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a171e93f8c92820e560f7504f325a7abe" name="a171e93f8c92820e560f7504f325a7abe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a171e93f8c92820e560f7504f325a7abe">&#9670;&nbsp;</a></span>SptrsvBcsr_u()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a171e93f8c92820e560f7504f325a7abe">&#9670;&nbsp;</a></span>SptrsvBcsr_u() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -570,12 +692,118 @@ template&lt;typename T , int bnl, int bnw&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="senk__sparse_8hpp_source.html#l00253">253</a> of file <a class="el" href="senk__sparse_8hpp_source.html">senk_sparse.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="senk__sparse_8hpp_source.html#l00332">332</a> of file <a class="el" href="senk__sparse_8hpp_source.html">senk_sparse.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a704fb04cb1684fdabd56c8afb769f01e" name="a704fb04cb1684fdabd56c8afb769f01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704fb04cb1684fdabd56c8afb769f01e">&#9670;&nbsp;</a></span>SptrsvBcsr_u() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int bnl, int bnw&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void senk::sparse::SptrsvBcsr_u </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>bval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>bcind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>brptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform the sparse upper triangular solve for a ABMC reordered matrix stored in the CSR format. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The Type of the matrix and the vectors. </td></tr>
+    <tr><td class="paramname">bnl</td><td>The number of rows of the block. </td></tr>
+    <tr><td class="paramname">bnw</td><td>The number of columns of the block. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bval</td><td>A val array in the BCSR format. </td></tr>
+    <tr><td class="paramname">bcind</td><td>A block col-index array in the BCSR format. </td></tr>
+    <tr><td class="paramname">brptr</td><td>A block row-pointer array in the BCSR format. </td></tr>
+    <tr><td class="paramname">x</td><td>Input vector of size N. </td></tr>
+    <tr><td class="paramname">y</td><td>Output vector of size N. </td></tr>
+    <tr><td class="paramname">N</td><td>The size of vectors. </td></tr>
+    <tr><td class="paramname">cptr</td><td>The starting index of each color is stored. </td></tr>
+    <tr><td class="paramname">cnum</td><td>The number of colors. </td></tr>
+    <tr><td class="paramname">bsize</td><td>The number of rows/columns of the blocks used in ABMC. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="senk__sparse_8hpp_source.html#l00436">436</a> of file <a class="el" href="senk__sparse_8hpp_source.html">senk_sparse.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aa8ba60972dad4ddbf416620323aba32e" name="aa8ba60972dad4ddbf416620323aba32e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8ba60972dad4ddbf416620323aba32e">&#9670;&nbsp;</a></span>SptrsvCsr_l() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ba60972dad4ddbf416620323aba32e">&#9670;&nbsp;</a></span>SptrsvCsr_l() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -658,7 +886,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a0aee5b0aa3fc78628cd0a5ef63844e14" name="a0aee5b0aa3fc78628cd0a5ef63844e14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0aee5b0aa3fc78628cd0a5ef63844e14">&#9670;&nbsp;</a></span>SptrsvCsr_l() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aee5b0aa3fc78628cd0a5ef63844e14">&#9670;&nbsp;</a></span>SptrsvCsr_l() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -754,8 +982,112 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a8ed31e67fee0b0c85d3f85913f49f524" name="a8ed31e67fee0b0c85d3f85913f49f524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed31e67fee0b0c85d3f85913f49f524">&#9670;&nbsp;</a></span>SptrsvCsr_l() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void senk::sparse::SptrsvCsr_l </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform the sparse lower triangular solve in parallel on a ABMC ordered matrix stored in the CSR format. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The Type of the matrix and the vectors. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>A val array in the CSR format. </td></tr>
+    <tr><td class="paramname">cind</td><td>A col-index array in the CSR format. </td></tr>
+    <tr><td class="paramname">rptr</td><td>A row-pointer array in the CSR format. </td></tr>
+    <tr><td class="paramname">x</td><td>Input vector of size N. </td></tr>
+    <tr><td class="paramname">y</td><td>Output vector of size N. </td></tr>
+    <tr><td class="paramname">N</td><td>The size of vectors. </td></tr>
+    <tr><td class="paramname">cptr</td><td>The starting index of each color is stored. </td></tr>
+    <tr><td class="paramname">cnum</td><td>The number of colors. </td></tr>
+    <tr><td class="paramname">bsize</td><td>The number of rows/columns of the blocks used in ABMC. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="senk__sparse_8hpp_source.html#l00217">217</a> of file <a class="el" href="senk__sparse_8hpp_source.html">senk_sparse.hpp</a>.</p>
+
+</div>
+</div>
 <a id="aef0dafd5d3c3621a657507b6c7cf6016" name="aef0dafd5d3c3621a657507b6c7cf6016"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef0dafd5d3c3621a657507b6c7cf6016">&#9670;&nbsp;</a></span>SptrsvCsr_u() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0dafd5d3c3621a657507b6c7cf6016">&#9670;&nbsp;</a></span>SptrsvCsr_u() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -838,7 +1170,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="ab615306f780e5c19a760eff9e342050d" name="ab615306f780e5c19a760eff9e342050d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab615306f780e5c19a760eff9e342050d">&#9670;&nbsp;</a></span>SptrsvCsr_u() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab615306f780e5c19a760eff9e342050d">&#9670;&nbsp;</a></span>SptrsvCsr_u() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -931,6 +1263,110 @@ template&lt;typename T &gt; </div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="senk__sparse_8hpp_source.html#l00181">181</a> of file <a class="el" href="senk__sparse_8hpp_source.html">senk_sparse.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a582f7d397cc56a144fef32a6872fb048" name="a582f7d397cc56a144fef32a6872fb048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a582f7d397cc56a144fef32a6872fb048">&#9670;&nbsp;</a></span>SptrsvCsr_u() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void senk::sparse::SptrsvCsr_u </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform the sparse upper triangular solve in parallel on a ABMC ordered matrix stored in the CSR format. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The Type of the matrix and the vectors. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>A val array in the CSR format. </td></tr>
+    <tr><td class="paramname">cind</td><td>A col-index array in the CSR format. </td></tr>
+    <tr><td class="paramname">rptr</td><td>A row-pointer array in the CSR format. </td></tr>
+    <tr><td class="paramname">x</td><td>Input vector of size N. </td></tr>
+    <tr><td class="paramname">y</td><td>Output vector of size N. </td></tr>
+    <tr><td class="paramname">N</td><td>The size of vectors. </td></tr>
+    <tr><td class="paramname">cptr</td><td>The starting index of each color is stored. </td></tr>
+    <tr><td class="paramname">cnum</td><td>The number of colors. </td></tr>
+    <tr><td class="paramname">bsize</td><td>The number of rows/columns of the blocks used in ABMC. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="senk__sparse_8hpp_source.html#l00256">256</a> of file <a class="el" href="senk__sparse_8hpp_source.html">senk_sparse.hpp</a>.</p>
 
 </div>
 </div>

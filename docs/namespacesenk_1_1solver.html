@@ -130,14 +130,354 @@ Functions</h2></td></tr>
 <tr class="memitem:aef0d6079aafc5f397b48c5a779cdf864"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1solver.html#aef0d6079aafc5f397b48c5a779cdf864">AmcIluGmresm</a> (T *val, int *cind, int *rptr, T *lval, int *lcind, int *lrptr, T *uval, int *ucind, int *urptr, int *cptr, int cnum, T *b, T *x, T nrm_b, int outer, int m, int N, T epsilon)</td></tr>
 <tr class="memdesc:aef0d6079aafc5f397b48c5a779cdf864"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ILU preconditioned GMRES(m) solver parallelized by AMC ordering.  <a href="namespacesenk_1_1solver.html#aef0d6079aafc5f397b48c5a779cdf864">More...</a><br /></td></tr>
 <tr class="separator:aef0d6079aafc5f397b48c5a779cdf864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d48de198d47f0ed10565e55a4ce21cf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1d48de198d47f0ed10565e55a4ce21cf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1solver.html#a1d48de198d47f0ed10565e55a4ce21cf">AbmcIluGmresm</a> (T *val, int *cind, int *rptr, T *lval, int *lcind, int *lrptr, T *uval, int *ucind, int *urptr, int *cptr, int cnum, int bsize, T *b, T *x, T nrm_b, int outer, int m, int N, T epsilon)</td></tr>
+<tr class="memdesc:a1d48de198d47f0ed10565e55a4ce21cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ILU preconditioned GMRES(m) solver parallelized by ABMC ordering.  <a href="namespacesenk_1_1solver.html#a1d48de198d47f0ed10565e55a4ce21cf">More...</a><br /></td></tr>
+<tr class="separator:a1d48de198d47f0ed10565e55a4ce21cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ccd0546dd6e1580dee75d3de1f93fda"><td class="memTemplParams" colspan="2">template&lt;typename T , int bnl, int bnw&gt; </td></tr>
 <tr class="memitem:a8ccd0546dd6e1580dee75d3de1f93fda"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1solver.html#a8ccd0546dd6e1580dee75d3de1f93fda">IlubGmresm</a> (T *val, int *cind, int *rptr, T *blval, int *blcind, int *blrptr, T *buval, int *bucind, int *burptr, T *b, T *x, T nrm_b, int outer, int m, int N, T epsilon)</td></tr>
 <tr class="memdesc:a8ccd0546dd6e1580dee75d3de1f93fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ILUB preconditioned GMRES(m) solver.  <a href="namespacesenk_1_1solver.html#a8ccd0546dd6e1580dee75d3de1f93fda">More...</a><br /></td></tr>
 <tr class="separator:a8ccd0546dd6e1580dee75d3de1f93fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ce84d38c9ed2511a95197a35bc5b8e"><td class="memTemplParams" colspan="2">template&lt;typename T , int bnl, int bnw&gt; </td></tr>
+<tr class="memitem:ab0ce84d38c9ed2511a95197a35bc5b8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1solver.html#ab0ce84d38c9ed2511a95197a35bc5b8e">AbmcIlubGmresm</a> (T *val, int *cind, int *rptr, T *blval, int *blcind, int *blrptr, T *buval, int *bucind, int *burptr, int *cptr, int cnum, int bsize, T *b, T *x, T nrm_b, int outer, int m, int N, T epsilon)</td></tr>
+<tr class="memdesc:ab0ce84d38c9ed2511a95197a35bc5b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ILUB preconditioned GMRES(m) solver parallelized by ABMC ordering.  <a href="namespacesenk_1_1solver.html#ab0ce84d38c9ed2511a95197a35bc5b8e">More...</a><br /></td></tr>
+<tr class="separator:ab0ce84d38c9ed2511a95197a35bc5b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Contains solvers. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ab0ce84d38c9ed2511a95197a35bc5b8e" name="ab0ce84d38c9ed2511a95197a35bc5b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ce84d38c9ed2511a95197a35bc5b8e">&#9670;&nbsp;</a></span>AbmcIlubGmresm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int bnl, int bnw&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void senk::solver::AbmcIlubGmresm </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>blval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>blcind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>blrptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>buval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>bucind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>burptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>nrm_b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>outer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>epsilon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ILUB preconditioned GMRES(m) solver parallelized by ABMC ordering. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of a coefficient matrix and vectors. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>val array of the CSR storage format. </td></tr>
+    <tr><td class="paramname">cind</td><td>column index array of the CSR storage format. </td></tr>
+    <tr><td class="paramname">rptr</td><td>row pointer array of the CSR storage format. </td></tr>
+    <tr><td class="paramname">blval</td><td>values of L in the BCSR format. </td></tr>
+    <tr><td class="paramname">blcind</td><td>colum positions of blocks of L in the BCSR format. </td></tr>
+    <tr><td class="paramname">blrptr</td><td>starting positions of row blocks of L in the BCSR format. </td></tr>
+    <tr><td class="paramname">buval</td><td>values of U in the BCSR format. </td></tr>
+    <tr><td class="paramname">bucind</td><td>colum positions of blocks of U in the BCSR format. </td></tr>
+    <tr><td class="paramname">burptr</td><td>starting positions of row blocks of U in the BCSR format. </td></tr>
+    <tr><td class="paramname">cptr</td><td>The starting index of each color is stored. </td></tr>
+    <tr><td class="paramname">cnum</td><td>The number of colors. </td></tr>
+    <tr><td class="paramname">bsize</td><td>The number of rows/columns of the blocks used in ABMC. </td></tr>
+    <tr><td class="paramname">b</td><td>A right-hand side vector. </td></tr>
+    <tr><td class="paramname">x</td><td>An unknown vector. </td></tr>
+    <tr><td class="paramname">nrm_b</td><td>The 2-norm of b. </td></tr>
+    <tr><td class="paramname">outer</td><td>The maximum number of iterations of outer loop. </td></tr>
+    <tr><td class="paramname">m</td><td>The number of the restart period. </td></tr>
+    <tr><td class="paramname">N</td><td>The size of the matrix and the vectors. </td></tr>
+    <tr><td class="paramname">epsilon</td><td>The convergence criterion. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="senk__gmres_8hpp_source.html#l00475">475</a> of file <a class="el" href="senk__gmres_8hpp_source.html">senk_gmres.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1d48de198d47f0ed10565e55a4ce21cf" name="a1d48de198d47f0ed10565e55a4ce21cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d48de198d47f0ed10565e55a4ce21cf">&#9670;&nbsp;</a></span>AbmcIluGmresm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void senk::solver::AbmcIluGmresm </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>lval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>lcind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>lrptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>uval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ucind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>urptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>nrm_b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>outer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>epsilon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ILU preconditioned GMRES(m) solver parallelized by ABMC ordering. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of a coefficient matrix and vectors. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>val array of the CSR storage format. </td></tr>
+    <tr><td class="paramname">cind</td><td>column index array of the CSR storage format. </td></tr>
+    <tr><td class="paramname">rptr</td><td>row pointer array of the CSR storage format. </td></tr>
+    <tr><td class="paramname">lval</td><td>Same as val, but for the matrix L. </td></tr>
+    <tr><td class="paramname">lcind</td><td>Same as cind, but for the matrix L. </td></tr>
+    <tr><td class="paramname">lrptr</td><td>Same as rptr, but for the matrix L. </td></tr>
+    <tr><td class="paramname">uval</td><td>Same as val, but for the matrix U. </td></tr>
+    <tr><td class="paramname">ucind</td><td>Same as cind, but for the matrix U. </td></tr>
+    <tr><td class="paramname">urptr</td><td>Same as rptr, but for the matrix U. </td></tr>
+    <tr><td class="paramname">cptr</td><td>The starting index of each color is stored. </td></tr>
+    <tr><td class="paramname">cnum</td><td>The number of colors. </td></tr>
+    <tr><td class="paramname">bsize</td><td>The number of rows/columns of the blocks used in ABMC. </td></tr>
+    <tr><td class="paramname">b</td><td>A right-hand side vector. </td></tr>
+    <tr><td class="paramname">x</td><td>An unknown vector. </td></tr>
+    <tr><td class="paramname">nrm_b</td><td>The 2-norm of b. </td></tr>
+    <tr><td class="paramname">outer</td><td>The maximum number of iterations of outer loop. </td></tr>
+    <tr><td class="paramname">m</td><td>The number of the restart period. </td></tr>
+    <tr><td class="paramname">N</td><td>The size of the matrix and the vectors. </td></tr>
+    <tr><td class="paramname">epsilon</td><td>The convergence criterion. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="senk__gmres_8hpp_source.html#l00295">295</a> of file <a class="el" href="senk__gmres_8hpp_source.html">senk_gmres.hpp</a>.</p>
+
+</div>
+</div>
 <a id="aef0d6079aafc5f397b48c5a779cdf864" name="aef0d6079aafc5f397b48c5a779cdf864"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef0d6079aafc5f397b48c5a779cdf864">&#9670;&nbsp;</a></span>AmcIluGmresm()</h2>
 
@@ -1025,7 +1365,7 @@ template&lt;typename T , int bnl, int bnw&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="senk__gmres_8hpp_source.html#l00294">294</a> of file <a class="el" href="senk__gmres_8hpp_source.html">senk_gmres.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="senk__gmres_8hpp_source.html#l00384">384</a> of file <a class="el" href="senk__gmres_8hpp_source.html">senk_gmres.hpp</a>.</p>
 
 </div>
 </div>

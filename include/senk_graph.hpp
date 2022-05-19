@@ -15,7 +15,7 @@ namespace senk {
  */
 namespace graph {
 /**
- * @brief Partition a input graph into blocks
+ * @brief Partition a input graph into blocks by using simple blocking.
  * @param cind An array that stores column indices.
  * @param rptr An array that stores row pointer.
  * @param b_cind A pointer to an array that stores column indices of the resulting blocked matrix.
@@ -24,7 +24,7 @@ namespace graph {
  * @param N The size of a input graph (matrix)
  * @param bsize The size of the block.
  */
-void Blocking( // Simple Blocking
+static void SimpleBlocking( // Simple Blocking
     int *cind, int *rptr,
     int **b_cind, int **b_rptr, int **block,
     int N, int bsize)
@@ -65,6 +65,80 @@ void Blocking( // Simple Blocking
     }
 }
 /**
+ * @brief Partition a input graph into blocks by using connected blocking.
+ * @param cind An array that stores column indices.
+ * @param rptr An array that stores row pointer.
+ * @param b_cind A pointer to an array that stores column indices of the resulting blocked matrix.
+ * @param b_rptr A pointer to an array that stores row pointer of the resulting blocked matrix.
+ * @param block A pointer to an array that maps the original index to the block.
+ * @param N The size of a input graph (matrix)
+ * @param bsize The size of the block.
+ */
+static void ConnectedBlocking( // Connected Blocking
+    int *cind, int *rptr,
+    int **b_cind, int **b_rptr, int **block,
+    int N, int bsize)
+{
+    *block = utils::SafeCalloc<int>(N);
+    int *inv_block = utils::SafeCalloc<int>(N);
+    int *visited = utils::SafeCalloc<int>(N);
+    int *queue = utils::SafeCalloc<int>(bsize+1);
+    int qs, qe;
+    int count = 0, tcnt = 0;
+    for(int i=0; i<N; i++) {
+        if(visited[i]) continue;
+        qs = 0; qe = 0; // Clear
+        (*block)[count] = i; count++; tcnt++;
+        inv_block[i] = (count-1) / bsize;
+        visited[i] = 1;
+        if(tcnt == bsize) { tcnt = 0; continue; }
+        queue[qe] = i; qe++; // Enqueue
+        bool isFull = false;
+        while(!isFull) {
+            int q = queue[qs]; qs++; // Dequeue
+            for(int j=rptr[q]; j<rptr[q+1]; j++) {
+                if(visited[cind[j]]) continue;
+                (*block)[count] = cind[j]; count++; tcnt++;
+                inv_block[cind[j]] = (count-1) / bsize;
+                visited[cind[j]] = 1;
+                if(tcnt == bsize) { tcnt = 0; isFull=true; break; }
+                queue[qe] = cind[j]; qe++; // Enqueue
+            }
+            if(qs > qe) { exit(1); }
+            if(qs == qe) { break; }
+        }
+    }
+    for(int i=0; i<N; i+=bsize) senk::helper::QuickSort<int>(*block, i, i+bsize-1);
+
+    *b_rptr = utils::SafeMalloc<int>(N/bsize+1);
+    *b_cind = utils::SafeMalloc<int>(rptr[N]); // At most rptr[N]
+    int *temp = utils::SafeMalloc<int>(rptr[N]); // At most rptr[N]
+    int cnt = 0;
+    (*b_rptr)[0] = 0;
+    for(int i=0; i<N; i+=bsize) {
+        int len = 0;
+        for(int j=0; j<bsize; j++) {
+            for(int k=rptr[(*block)[i+j]]; k<rptr[(*block)[i+j]+1]; k++) {
+                temp[len] = inv_block[cind[k]]; len++;
+            }
+        }
+        helper::QuickSort<int>(temp, 0, len-1);
+        (*b_cind)[cnt] = temp[0]; cnt++;
+        int prev = temp[0];
+        for(int j=1; j<len; j++) {
+            if(temp[j] == prev) continue;
+            (*b_cind)[cnt] = temp[j]; cnt++;
+            prev = temp[j];
+        }
+        (*b_rptr)[i/bsize+1] = cnt;
+    }
+    free(visited);
+    free(queue);
+    free(inv_block);
+    free(temp);
+}
+
+/**
  * @brief Create an adjacency matrix from a input matrix.
  * @param cind An array that stores column indices.
  * @param rptr An array that stores row pointer.
@@ -73,7 +147,7 @@ void Blocking( // Simple Blocking
  * @param N The size of a input graph (matrix)
  * @param isSym It true, a procedure for symmetric matrices is performed.
  */
-void GetAdjacency(
+static void GetAdjacency(
     int *cind, int *rptr,
     int **am_cind, int **am_rptr,
     int N, bool isSym)
@@ -141,7 +215,7 @@ void GetAdjacency(
  * @param num_color An array that stores the number of indices in each color. 
  * @param N The size of a input graph (matrix)
  */
-void Coloring( // Greedy Coloring
+static void Coloring( // Greedy Coloring
     int *cind, int *rptr, int **color, int *num_color, int N)
 {
     *color = utils::SafeCalloc<int>(N);
@@ -212,11 +286,12 @@ void GetAMCPermutation(
  * @param N The size of the input graph (matrix)
  * @param bsize The size of the block.
  * @param isSym Whether the input matrix is symmetric or not.
+ * @param bmethod Specify the blocking method: "simple" or "connect".
  */
 void GetABMCPermutation(
     int *cind, int *rptr,
     int *num_color, int **size_color, int **LP, int **RP,
-    int N, int bsize, bool isSym)
+    int N, int bsize, bool isSym, const char *bmethod)
 {
     if(N%bsize) {
         printf("Error: GetABMCPermutation\n");
@@ -225,8 +300,15 @@ void GetABMCPermutation(
     int *b_cind;
     int *b_rptr;
     int *block;
-    // Simple Blocking (or Grouping)
-    Blocking(cind, rptr, &b_cind, &b_rptr, &block, N, bsize);
+    if(std::strcmp(bmethod, "simple") == 0) {
+        SimpleBlocking(cind, rptr, &b_cind, &b_rptr, &block, N, bsize);
+    }else if(std::strcmp(bmethod, "connect") == 0) {
+        ConnectedBlocking(cind, rptr, &b_cind, &b_rptr, &block, N, bsize);
+    }else {
+        printf("Error: GetABMCPermutation\n");
+        printf("The blocking method is invalid\n");
+        exit(1);
+    }
     int *am_cind;
     int *am_rptr;
     GetAdjacency(b_cind, b_rptr, &am_cind, &am_rptr, N/bsize, isSym);

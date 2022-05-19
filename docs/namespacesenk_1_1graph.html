@@ -94,161 +94,18 @@ $(document).ready(function(){initNavTree('namespacesenk_1_1graph.html',''); init
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a91835e9d124ef3e30d1ede5dc12a1638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1graph.html#a91835e9d124ef3e30d1ede5dc12a1638">Blocking</a> (int *cind, int *rptr, int **b_cind, int **b_rptr, int **block, int N, int bsize)</td></tr>
-<tr class="memdesc:a91835e9d124ef3e30d1ede5dc12a1638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partition a input graph into blocks.  <a href="namespacesenk_1_1graph.html#a91835e9d124ef3e30d1ede5dc12a1638">More...</a><br /></td></tr>
-<tr class="separator:a91835e9d124ef3e30d1ede5dc12a1638"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1acea36dfe4644dc1143dc64033369e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1graph.html#a1acea36dfe4644dc1143dc64033369e6">GetAdjacency</a> (int *cind, int *rptr, int **am_cind, int **am_rptr, int N, bool isSym)</td></tr>
-<tr class="memdesc:a1acea36dfe4644dc1143dc64033369e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an adjacency matrix from a input matrix.  <a href="namespacesenk_1_1graph.html#a1acea36dfe4644dc1143dc64033369e6">More...</a><br /></td></tr>
-<tr class="separator:a1acea36dfe4644dc1143dc64033369e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfa3c46e810a6dcd28c52c93a13f987a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1graph.html#abfa3c46e810a6dcd28c52c93a13f987a">Coloring</a> (int *cind, int *rptr, int **color, int *num_color, int N)</td></tr>
-<tr class="memdesc:abfa3c46e810a6dcd28c52c93a13f987a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coloring an adjacency matrix from a input matrix.  <a href="namespacesenk_1_1graph.html#abfa3c46e810a6dcd28c52c93a13f987a">More...</a><br /></td></tr>
-<tr class="separator:abfa3c46e810a6dcd28c52c93a13f987a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12242398c9aee41fb5f289eac0274ce2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1graph.html#a12242398c9aee41fb5f289eac0274ce2">GetAMCPermutation</a> (int *cind, int *rptr, int *num_color, int **size_color, int **LP, int **RP, int N, bool isSym)</td></tr>
 <tr class="memdesc:a12242398c9aee41fb5f289eac0274ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an permutation matrix based on the AMC ordering technique<a class="el" href="citelist.html#CITEREF_iwashita2002AMC">[1]</a>.  <a href="namespacesenk_1_1graph.html#a12242398c9aee41fb5f289eac0274ce2">More...</a><br /></td></tr>
 <tr class="separator:a12242398c9aee41fb5f289eac0274ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34bb9ef3c08bcc6f75af1e9df8297467"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1graph.html#a34bb9ef3c08bcc6f75af1e9df8297467">GetABMCPermutation</a> (int *cind, int *rptr, int *num_color, int **size_color, int **LP, int **RP, int N, int bsize, bool isSym)</td></tr>
-<tr class="memdesc:a34bb9ef3c08bcc6f75af1e9df8297467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an permutation matrix based on the ABMC ordering technique<a class="el" href="citelist.html#CITEREF_iwashita2012ABMC">[2]</a>, <a class="el" href="citelist.html#CITEREF_li2019enhancement">[3]</a>.  <a href="namespacesenk_1_1graph.html#a34bb9ef3c08bcc6f75af1e9df8297467">More...</a><br /></td></tr>
-<tr class="separator:a34bb9ef3c08bcc6f75af1e9df8297467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e03899c327e3ed700438d7afb44e7ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesenk_1_1graph.html#a7e03899c327e3ed700438d7afb44e7ac">GetABMCPermutation</a> (int *cind, int *rptr, int *num_color, int **size_color, int **LP, int **RP, int N, int bsize, bool isSym, const char *bmethod)</td></tr>
+<tr class="memdesc:a7e03899c327e3ed700438d7afb44e7ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an permutation matrix based on the ABMC ordering technique<a class="el" href="citelist.html#CITEREF_iwashita2012ABMC">[2]</a>, <a class="el" href="citelist.html#CITEREF_li2019enhancement">[3]</a>.  <a href="namespacesenk_1_1graph.html#a7e03899c327e3ed700438d7afb44e7ac">More...</a><br /></td></tr>
+<tr class="separator:a7e03899c327e3ed700438d7afb44e7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Contains functions related to the graph theory. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a91835e9d124ef3e30d1ede5dc12a1638" name="a91835e9d124ef3e30d1ede5dc12a1638"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91835e9d124ef3e30d1ede5dc12a1638">&#9670;&nbsp;</a></span>Blocking()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void senk::graph::Blocking </td>
-          <td>(</td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>cind</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>rptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int **&#160;</td>
-          <td class="paramname"><em>b_cind</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int **&#160;</td>
-          <td class="paramname"><em>b_rptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int **&#160;</td>
-          <td class="paramname"><em>block</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>N</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>bsize</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Partition a input graph into blocks. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cind</td><td>An array that stores column indices. </td></tr>
-    <tr><td class="paramname">rptr</td><td>An array that stores row pointer. </td></tr>
-    <tr><td class="paramname">b_cind</td><td>A pointer to an array that stores column indices of the resulting blocked matrix. </td></tr>
-    <tr><td class="paramname">b_rptr</td><td>A pointer to an array that stores row pointer of the resulting blocked matrix. </td></tr>
-    <tr><td class="paramname">block</td><td>A pointer to an array that maps the original index to the block. </td></tr>
-    <tr><td class="paramname">N</td><td>The size of a input graph (matrix) </td></tr>
-    <tr><td class="paramname">bsize</td><td>The size of the block. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="senk__graph_8hpp_source.html#l00027">27</a> of file <a class="el" href="senk__graph_8hpp_source.html">senk_graph.hpp</a>.</p>
-
-</div>
-</div>
-<a id="abfa3c46e810a6dcd28c52c93a13f987a" name="abfa3c46e810a6dcd28c52c93a13f987a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfa3c46e810a6dcd28c52c93a13f987a">&#9670;&nbsp;</a></span>Coloring()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void senk::graph::Coloring </td>
-          <td>(</td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>cind</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>rptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int **&#160;</td>
-          <td class="paramname"><em>color</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>num_color</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>N</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Coloring an adjacency matrix from a input matrix. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cind</td><td>An array that stores column indices. </td></tr>
-    <tr><td class="paramname">rptr</td><td>An array that stores row pointer. </td></tr>
-    <tr><td class="paramname">color</td><td>A pointer to an array that maps indices to colors. </td></tr>
-    <tr><td class="paramname">num_color</td><td>An array that stores the number of indices in each color. </td></tr>
-    <tr><td class="paramname">N</td><td>The size of a input graph (matrix) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="senk__graph_8hpp_source.html#l00144">144</a> of file <a class="el" href="senk__graph_8hpp_source.html">senk_graph.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a34bb9ef3c08bcc6f75af1e9df8297467" name="a34bb9ef3c08bcc6f75af1e9df8297467"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34bb9ef3c08bcc6f75af1e9df8297467">&#9670;&nbsp;</a></span>GetABMCPermutation()</h2>
+<a id="a7e03899c327e3ed700438d7afb44e7ac" name="a7e03899c327e3ed700438d7afb44e7ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e03899c327e3ed700438d7afb44e7ac">&#9670;&nbsp;</a></span>GetABMCPermutation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +162,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isSym</em>&#160;</td>
+          <td class="paramname"><em>isSym</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>bmethod</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -327,78 +190,12 @@ Functions</h2></td></tr>
     <tr><td class="paramname">N</td><td>The size of the input graph (matrix) </td></tr>
     <tr><td class="paramname">bsize</td><td>The size of the block. </td></tr>
     <tr><td class="paramname">isSym</td><td>Whether the input matrix is symmetric or not. </td></tr>
+    <tr><td class="paramname">bmethod</td><td>Specify the blocking method: "simple" or "connect". </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="senk__graph_8hpp_source.html#l00216">216</a> of file <a class="el" href="senk__graph_8hpp_source.html">senk_graph.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a1acea36dfe4644dc1143dc64033369e6" name="a1acea36dfe4644dc1143dc64033369e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1acea36dfe4644dc1143dc64033369e6">&#9670;&nbsp;</a></span>GetAdjacency()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void senk::graph::GetAdjacency </td>
-          <td>(</td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>cind</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>rptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int **&#160;</td>
-          <td class="paramname"><em>am_cind</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int **&#160;</td>
-          <td class="paramname"><em>am_rptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>N</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isSym</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create an adjacency matrix from a input matrix. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cind</td><td>An array that stores column indices. </td></tr>
-    <tr><td class="paramname">rptr</td><td>An array that stores row pointer. </td></tr>
-    <tr><td class="paramname">am_cind</td><td>A pointer to an array that stores column indices of the resulting adjacency matrix. </td></tr>
-    <tr><td class="paramname">am_rptr</td><td>A pointer to an array that stores row pointer of the resulting adjacency matrix. </td></tr>
-    <tr><td class="paramname">N</td><td>The size of a input graph (matrix) </td></tr>
-    <tr><td class="paramname">isSym</td><td>It true, a procedure for symmetric matrices is performed. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="senk__graph_8hpp_source.html#l00076">76</a> of file <a class="el" href="senk__graph_8hpp_source.html">senk_graph.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="senk__graph_8hpp_source.html#l00291">291</a> of file <a class="el" href="senk__graph_8hpp_source.html">senk_graph.hpp</a>.</p>
 
 </div>
 </div>
@@ -479,7 +276,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="senk__graph_8hpp_source.html#l00176">176</a> of file <a class="el" href="senk__graph_8hpp_source.html">senk_graph.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="senk__graph_8hpp_source.html#l00250">250</a> of file <a class="el" href="senk__graph_8hpp_source.html">senk_graph.hpp</a>.</p>
 
 </div>
 </div>
