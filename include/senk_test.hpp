@@ -17,7 +17,7 @@ void RelativeResidualError(
     senk::blas1::Axpby<double>(1, b, -1, t, N);
     double nrm_t = senk::blas1::Nrm2<double>(t, N);
     double nrm_b = senk::blas1::Nrm2<double>(b, N);
-    printf("%e\n", nrm_t/nrm_b);
+    printf("# test %e\n", nrm_t/nrm_b);
     free(t);
 }
 

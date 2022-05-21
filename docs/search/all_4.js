@@ -9,6 +9,6 @@ var searchData=
   ['getlev_6',['GetLev',['../classsenk_1_1sparse_1_1_sp_vec.html#accbdfa281548ad6042fb002798b6ab80',1,'senk::sparse::SpVec']]],
   ['getval_7',['GetVal',['../classsenk_1_1sparse_1_1_sp_vec.html#ad1c9855c996a8beac502786a16f00c74',1,'senk::sparse::SpVec']]],
   ['ggen_8',['Ggen',['../namespacesenk_1_1blas1.html#aff800dbf84349e6fa86df484a34abdcd',1,'senk::blas1']]],
-  ['gmresm_9',['Gmresm',['../namespacesenk_1_1solver.html#a49e731ce9f2a75212764790a98a0c269',1,'senk::solver']]],
+  ['gmresm_9',['Gmresm',['../namespacesenk_1_1solver.html#a49e731ce9f2a75212764790a98a0c269',1,'senk::solver::Gmresm(T *val, int *cind, int *rptr, T *b, T *x, T nrm_b, int outer, int m, int N, T epsilon)'],['../namespacesenk_1_1solver.html#aeb3a1e268b4422541cbc09ebebd7de2d',1,'senk::solver::Gmresm(T *bval, int *bcind, int *brptr, T *b, T *x, T nrm_b, int outer, int m, int N, T epsilon)']]],
   ['grot_10',['Grot',['../namespacesenk_1_1blas1.html#ad9eb0fe3f5cb4c06dfb00dc6e9cf18b7',1,'senk::blas1']]]
 ];

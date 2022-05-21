@@ -7,6 +7,11 @@
 #ifndef SENK_HPP
 #define SENK_HPP
 
+#define PRINT_RES false
+#define ITER_SYMBOL "I"
+#define TIME_SYMBOL "T"
+#define RES_SYMBOL "#"
+
 #include "senk_io.hpp"
 #include "senk_matrix.hpp"
 #include "senk_utils.hpp"

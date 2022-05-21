@@ -666,6 +666,29 @@ void AllocBlockZero(T **val, int **cind, int **rptr, int N, int bnl, int bnw)
 }
 
 template <typename T>
+void RemoveOffDiagonal(T **val, int **cind, int **rptr, int N, int bnum)
+{
+    int bsize = N / bnum;
+    int off = 0;
+    for(int i=0; i<N; i++) {
+        int start = (*rptr)[i]+off;
+        int min = i / bsize * bsize;
+        int max = min + bsize;
+        for(int j=start; j<(*rptr)[i+1]; j++) {
+            if((*cind)[j] < min || max <= (*cind)[j]) {
+                off++;
+                continue;
+            }
+            (*val)[j-off] = (*val)[j];
+            (*cind)[j-off] = (*cind)[j];
+        }
+        (*rptr)[i+1] -= off;
+    }
+    *val = utils::SafeRealloc<double>(*val, (*rptr)[N]);
+    *cind = utils::SafeRealloc<int>(*cind, (*rptr)[N]);
+}
+
+template <typename T>
 void Reordering(T *val, int *cind, int *rptr, int *RP, int N)
 {
     #pragma omp parallel for

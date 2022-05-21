@@ -56,6 +56,40 @@ void SpmvCsr(T *val, int *cind, int *rptr, T *diag, T *x, T *y, int N) {
     }
 }
 /**
+ * @brief Perform SpMV using the BCSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @tparam bnl The number of rows of the block.
+ * @tparam bnw The number of columns of the block.
+ * @param bval A val array in the BCSR format.
+ * @param bcind A col-index array in the BCSR format.
+ * @param brptr A row-pointer array in the BCSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ */
+template <typename T, int bnl, int bnw> inline
+void SpmvBcsr(T *bval, int *bcind, int *brptr, T *x, T *y, int N) {
+    int b_size = bnl * bnw;
+    #pragma omp parallel for
+    for(int i=0; i<N; i+=bnl) {
+        int bidx = i / bnl;
+        #pragma omp simd simdlen(bnl)
+        for(int j=0; j<bnl; j++) {
+            y[i+j] = 0;
+        }
+        for(int j=brptr[bidx]; j<brptr[bidx+1]; j++) {
+            int x_ind = bcind[j]*bnw;
+            for(int l=0; l<bnw; l++) {
+                int off = j*b_size+l*bnl;
+                #pragma omp simd simdlen(bnl)
+                for(int k=0; k<bnl; k++) {
+                    y[i+k] += bval[off+k] * x[x_ind+l];
+                }
+            }
+        }
+    }
+}
+/**
  * @brief Perform SpMV using the sliced-ELLPACK (SELL-c) format.
  * @tparam T The Type of the matrix and the vectors.
  * @param val A val array in the SELL-c format.
@@ -276,6 +310,70 @@ void SptrsvCsr_u(T *val, int *cind, int *rptr, T *x, T *y,
                     y[idx] = temp * val[j];
                 }
             }
+        }
+    }
+}
+/**
+ * @brief Perform the block Jacobi sparse lower triangular solve on a matrix stored in the CSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @param val A val array in the CSR format.
+ * @param cind A col-index array in the CSR format.
+ * @param rptr A row-pointer array in the CSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ * @param bptr The starting index of each block is stored.
+ * @param bnum The number of the blocks.
+ */
+template <typename T> inline
+void SptrsvCsr_l(T *val, int *cind, int *rptr, T *x, T *y,
+    int N, int bnum)
+{
+    // L is assumed to be unit lower triangular.
+    int bsize = N / bnum;
+    #pragma omp parallel for num_threads(bnum)
+    for(int k=0; k<bnum; k++) {
+        int start = k*bsize;
+        int end = (k+1)*bsize;
+        for(int i=start; i<end; i++) {
+            T temp = x[i];
+            for(int j=rptr[i]; j<rptr[i+1]; j++) {
+                temp -= val[j] * y[cind[j]];
+            }
+            y[i] = temp;
+        }
+    }
+}
+/**
+ * @brief Perform the block Jacobi sparse upper triangular solve on a matrix stored in the CSR format.
+ * @tparam T The Type of the matrix and the vectors.
+ * @param val A val array in the CSR format.
+ * @param cind A col-index array in the CSR format.
+ * @param rptr A row-pointer array in the CSR format.
+ * @param x Input vector of size N.
+ * @param y Output vector of size N.
+ * @param N The size of vectors.
+ * @param bptr The starting index of each block is stored.
+ * @param bnum The number of the blocks.
+ */
+template <typename T> inline
+void SptrsvCsr_u(T *val, int *cind, int *rptr, T *x, T *y,
+    int N, int bnum)
+{
+    // U is assumed to be general upper triangular.
+    // Diagonal has been inverted.
+    int bsize = N / bnum;
+    #pragma omp parallel for num_threads(bnum)
+    for(int k=0; k<bnum; k++) {
+        int start = k*bsize;
+        int end = (k+1)*bsize;
+        for(int i=end-1; i>=start; i--) {
+            T temp = x[i];
+            int j;
+            for(j=rptr[i+1]-1; j>=rptr[i]+1; j--) {
+                temp -= val[j] * y[cind[j]];    
+            }
+            y[i] = temp * val[j];
         }
     }
 }
